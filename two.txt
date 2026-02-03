@@ -1,6 +1,0 @@
-<<<<<<< HEAD
-bye
-=======
-hello
-helloooo
->>>>>>> backup

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lunaris Beauty Salón</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Navigácia -->
+  <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">Lunaris</h1>
+      <button class="bg-gradient-to-r from-pink-500 to-blue-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300">
+        Objednať
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero sekcia -->
+  <section class="pt-32 pb-24 px-6 bg-gradient-to-br from-gray-50 via-pink-50 to-blue-50">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight">
+        Premýšľame <span class="bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">krásne</span>
+      </h2>
+      <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+        Váš prémiový beauty salón v srdci mesta. Profesionálne služby, moderné technológie, individuálny prístup.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button class="bg-gradient-to-r from-pink-500 to-blue-500 text-white px-10 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300">
+          Rezervovať termín
+        </button>
+        <button class="border-2 border-gray-900 text-gray-900 px-10 py-4 rounded-full text-lg font-semibold hover:bg-gray-900 hover:text-white transition-all duration-300">
+          Cenník
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Služby -->
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h3 class="text-4xl md:text-5xl font-bold mb-4">Naše služby</h3>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Individuálny prístup a prémiová kvalita pre každého klienta</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Služba 1 -->
+        <div class="group border border-gray-200 rounded-3xl p-8 hover:shadow-2xl hover:border-pink-200 transition-all duration-300">
+          <div class="w-16 h-16 bg-gradient-to-br from-pink-100 to-pink-200 rounded-2xl mb-6 flex items-center justify-center text-3xl">
+            💇‍♀️
+          </div>
+          <h4 class="text-2xl font-bold mb-3">Strihanie & styling</h4>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Moderné strihy, farbenie, melírovanie. Profesionálna starostlivosť o vaše vlasy.
+          </p>
+          <p class="text-sm text-gray-500 mb-4">Od 25€ • 45-90 min</p>
+          <button class="w-full bg-gray-900 text-white py-3 rounded-full hover:bg-gradient-to-r hover:from-pink-500 hover:to-blue-500 transition-all duration-300">
+            Objednať
+          </button>
+        </div>
+
+        <!-- Služba 2 -->
+        <div class="group border border-gray-200 rounded-3xl p-8 hover:shadow-2xl hover:border-blue-200 transition-all duration-300">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl mb-6 flex items-center justify-center text-3xl">
+            💅
+          </div>
+          <h4 class="text-2xl font-bold mb-3">Manikúra & pedikúra</h4>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Gélovky, akryl, zdobenie. Dokonalé nechty pre každú príležitosť.
+          </p>
+          <p class="text-sm text-gray-500 mb-4">Od 20€ • 60-120 min</p>
+          <button class="w-full bg-gray-900 text-white py-3 rounded-full hover:bg-gradient-to-r hover:from-pink-500 hover:to-blue-500 transition-all duration-300">
+            Objednať
+          </button>
+        </div>
+
+        <!-- Služba 3 -->
+        <div class="group border border-gray-200 rounded-3xl p-8 hover:shadow-2xl hover:border-pink-200 transition-all duration-300">
+          <div class="w-16 h-16 bg-gradient-to-br from-pink-100 to-purple-200 rounded-2xl mb-6 flex items-center justify-center text-3xl">
+            ✨
+          </div>
+          <h4 class="text-2xl font-bold mb-3">Kozmetika & masáž</h4>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Ošetrenie pleti, masáže tváre, lifting. Relaxácia a regenerácia.
+          </p>
+          <p class="text-sm text-gray-500 mb-4">Od 30€ • 60-90 min</p>
+          <button class="w-full bg-gray-900 text-white py-3 rounded-full hover:bg-gradient-to-r hover:from-pink-500 hover:to-blue-500 transition-all duration-300">
+            Objednať
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O nás / Prečo my -->
+  <section class="py-24 px-6 bg-gradient-to-br from-gray-50 to-pink-50">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h3 class="text-4xl md:text-5xl font-bold mb-6">Prečo si vybrať Lunaris?</h3>
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-blue-500 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold">
+              1
+            </div>
+            <div>
+              <h4 class="font-bold text-lg mb-1">10+ rokov skúseností</h4>
+              <p class="text-gray-600">Certifikovaní profesionáli s medzinárodnou praxou</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-blue-500 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold">
+              2
+            </div>
+            <div>
+              <h4 class="font-bold text-lg mb-1">Prémiové produkty</h4>
+              <p class="text-gray-600">Spolupracujeme len s overenými značkami</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-blue-500 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold">
+              3
+            </div>
+            <div>
+              <h4 class="font-bold text-lg mb-1">Individuálny prístup</h4>
+              <p class="text-gray-600">Každý klient dostane personalizovanú konzultáciu</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gradient-to-br from-pink-200 to-blue-200 rounded-3xl h-96 flex items-center justify-center text-6xl">
+        🌸
+      </div>
+    </div>
+  </section>
+
+  <!-- Cenník -->
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-4xl md:text-5xl font-bold text-center mb-16">Cenník</h3>
+      <div class="space-y-4">
+        <div class="flex justify-between items-center border-b border-gray-200 py-4 hover:bg-gray-50 px-4 rounded-lg transition-colors">
+          <div>
+            <h4 class="font-semibold text-lg">Strihanie dámske</h4>
+            <p class="text-sm text-gray-600">60 min</p>
+          </div>
+          <span class="text-xl font-bold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">25€</span>
+        </div>
+        <div class="flex justify-between items-center border-b border-gray-200 py-4 hover:bg-gray-50 px-4 rounded-lg transition-colors">
+          <div>
+            <h4 class="font-semibold text-lg">Farbenie + strih</h4>
+            <p class="text-sm text-gray-600">120 min</p>
+          </div>
+          <span class="text-xl font-bold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">65€</span>
+        </div>
+        <div class="flex justify-between items-center border-b border-gray-200 py-4 hover:bg-gray-50 px-4 rounded-lg transition-colors">
+          <div>
+            <h4 class="font-semibold text-lg">Gélové nechty</h4>
+            <p class="text-sm text-gray-600">90 min</p>
+          </div>
+          <span class="text-xl font-bold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">35€</span>
+        </div>
+        <div class="flex justify-between items-center border-b border-gray-200 py-4 hover:bg-gray-50 px-4 rounded-lg transition-colors">
+          <div>
+            <h4 class="font-semibold text-lg">Kozmetické ošetrenie</h4>
+            <p class="text-sm text-gray-600">75 min</p>
+          </div>
+          <span class="text-xl font-bold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">45€</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt / CTA -->
+  <section class="py-24 px-6 bg-gradient-to-br from-pink-500 to-blue-500 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-4xl md:text-5xl font-bold mb-6">Pripravení na premenu?</h3>
+      <p class="text-xl mb-10 opacity-90">Rezervujte si termín online alebo nás kontaktujte telefonicky</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <button class="bg-white text-gray-900 px-10 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300">
+          📅 Rezervovať online
+        </button>
+        <button class="border-2 border-white text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-pink-500 transition-all duration-300">
+          📞 +421 123 456 789
+        </button>
+      </div>
+      <div class="text-sm opacity-75">
+        <p>Pon-Pia: 9:00 - 19:00 | Sob: 9:00 - 15:00</p>
+        <p class="mt-2">📍 Hlavná ulica 12, Bratislava</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-12 px-6">
+    <div class="max-w-7xl mx-auto text-center">
+      <h4 class="text-2xl font-bold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent mb-4">Lunaris</h4>
+      <p class="mb-4">© 2026 Lunaris Beauty Salón. Všetky práva vyhradené.</p>
+      <div class="flex justify-center gap-6 text-sm">
+        <a href="#" class="hover:text-white transition-colors">Instagram</a>
+        <a href="#" class="hover:text-white transition-colors">Facebook</a>
+        <a href="#" class="hover:text-white transition-colors">GDPR</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
