@@ -3,205 +3,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salón</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Grooming Salón Sabina | Profesionálny grooming pre psíkov</title>
+  <link href="src/output.css" rel="stylesheet">
 </head>
-<body class="bg-white text-gray-900">
+<body class="bg-gradient-to-br from-pink-50 to-orange-50 min-h-screen">
 
-  <!-- Navigácia -->
-  <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">Lunaris</h1>
-      <button class="bg-gradient-to-r from-pink-500 to-blue-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300">
-        Objednať
-      </button>
+  <!-- NAVBAR -->
+  <nav class="bg-white/80 backdrop-blur-md shadow-xl sticky top-0 z-50 border-b border-pink-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-gradient-to-r from-pink-500 to-orange-500 rounded-2xl shadow-lg flex items-center justify-center">
+            <span class="text-xl">🐕</span>
+          </div>
+          <h1 class="text-2xl font-black bg-gradient-to-r from-pink-600 to-orange-600 bg-clip-text text-transparent">
+            Grooming Sabina
+          </h1>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#sluzby" class="text-gray-700 hover:text-pink-500 font-semibold transition-all">Služby</a>
+          <a href="#cennik" class="text-gray-700 hover:text-pink-500 font-semibold transition-all">Cenník</a>
+          <a href="#kontakt" class="text-gray-700 hover:text-pink-500 font-semibold transition-all">Kontakt</a>
+          <button class="bg-gradient-to-r from-pink-500 to-orange-500 text-white px-8 py-3 rounded-2xl font-bold shadow-lg hover:shadow-pink-500/50 transform hover:-translate-y-1 transition-all duration-300">
+            Objednať online
+          </button>
+        </div>
+        <button class="md:hidden p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
     </div>
   </nav>
 
-  <!-- Hero sekcia -->
-  <section class="pt-32 pb-24 px-6 bg-gradient-to-br from-gray-50 via-pink-50 to-blue-50">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight">
-        Upravujeme <span class="bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">krásne</span>
+  <!-- HERO -->
+  <section class="pt-24 pb-32 bg-gradient-to-br from-pink-500 via-rose-500 to-orange-400 relative overflow-hidden">
+    <div class="absolute inset-0 bg-black/10"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
+      <h2 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+        Perfektný grooming<br>
+        <span class="text-6xl md:text-8xl">🐶✨</span>
       </h2>
-      <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-        Váš prémiový beauty salón v srdci mesta. Profesionálne služby, moderné technológie, individuálny prístup.
+      <p class="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
+        Profesionálne strihanie, kúpeľ, sušenie a styling. Tvoj psík bude vyzerať ako z Instagramu.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <button class="bg-gradient-to-r from-pink-500 to-blue-500 text-white px-10 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300">
-          Rezervovať termín
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+        <button class="bg-white text-pink-600 px-12 py-5 text-xl font-bold rounded-3xl shadow-2xl hover:shadow-white/50 transform hover:-translate-y-2 transition-all duration-500 w-full sm:w-auto">
+          Objednať termín
         </button>
-        <button class="border-2 border-gray-900 text-gray-900 px-10 py-4 rounded-full text-lg font-semibold hover:bg-gray-900 hover:text-white transition-all duration-300">
-          Cenník
+        <button class="border-2 border-white text-white px-12 py-5 text-xl font-bold rounded-3xl hover:bg-white hover:text-pink-600 transition-all duration-300">
+          Pozrieť portfólio
         </button>
       </div>
     </div>
   </section>
 
-  <!-- Služby -->
-  <section class="py-24 px-6 bg-white">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h3 class="text-4xl md:text-5xl font-bold mb-4">Naše služby</h3>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Individuálny prístup a prémiová kvalita pre každého klienta</p>
+  <!-- SLUŽBY -->
+  <section id="sluzby" class="py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-24">
+        <h3 class="text-4xl md:text-5xl font-black bg-gradient-to-r from-pink-600 to-orange-600 bg-clip-text text-transparent mb-6">
+          Naše služby
+        </h3>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Komplexná starostlivosť o krásu tvojho psíka.
+        </p>
       </div>
-      
       <div class="grid md:grid-cols-3 gap-8">
-        <!-- Služba 1 -->
-        <div class="group border border-gray-200 rounded-3xl p-8 hover:shadow-2xl hover:border-pink-200 transition-all duration-300">
-          <div class="w-16 h-16 bg-gradient-to-br from-pink-100 to-pink-200 rounded-2xl mb-6 flex items-center justify-center text-3xl">
-            💇‍♀️
+        <div class="group bg-gradient-to-br from-pink-50 to-orange-50 p-10 rounded-3xl shadow-xl hover:shadow-2xl transform hover:-translate-y-4 transition-all duration-500 border border-pink-100">
+          <div class="w-20 h-20 bg-gradient-to-r from-pink-400 to-orange-400 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+            <span class="text-2xl">🛁</span>
           </div>
-          <h4 class="text-2xl font-bold mb-3">Strihanie & styling</h4>
-          <p class="text-gray-600 mb-6 leading-relaxed">
-            Moderné strihy, farbenie, melírovanie. Profesionálna starostlivosť o vaše vlasy.
-          </p>
-          <p class="text-sm text-gray-500 mb-4">Od 25€ • 45-90 min</p>
-          <button class="w-full bg-gray-900 text-white py-3 rounded-full hover:bg-gradient-to-r hover:from-pink-500 hover:to-blue-500 transition-all duration-300">
-            Objednať
-          </button>
+          <h4 class="text-2xl font-bold text-gray-900 mb-4 text-center">Komplexný kúpeľ</h4>
+          <p class="text-gray-600 text-center mb-8 leading-relaxed">Profesionálny šampón, kondicionér, sušenie FUEGO sušičom.</p>
+          <ul class="text-left space-y-2 text-sm text-gray-500">
+            <li>••✓ Premium produkty</li>
+            <li>••✓ Teplé sušenie</li>
+            <li>••✓ Masáž</li>
+          </ul>
         </div>
-
-        <!-- Služba 2 -->
-        <div class="group border border-gray-200 rounded-3xl p-8 hover:shadow-2xl hover:border-blue-200 transition-all duration-300">
-          <div class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl mb-6 flex items-center justify-center text-3xl">
-            💅
+        <div class="group bg-gradient-to-br from-pink-50 to-orange-50 p-10 rounded-3xl shadow-xl hover:shadow-2xl transform hover:-translate-y-4 transition-all duration-500 border border-pink-100 relative overflow-hidden md:col-span-2">
+          <div class="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-orange-500/5"></div>
+          <div class="relative">
+            <div class="w-20 h-20 bg-gradient-to-r from-pink-400 to-orange-400 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+              <span class="text-2xl">✂️</span>
+            </div>
+            <h4 class="text-2xl font-bold text-gray-900 mb-4 text-center">Individuálny strih</h4>
+            <p class="text-gray-600 text-center mb-8 leading-relaxed">Podľa plemena, dĺžky srsti a štýlu. Konzultácia zdarma.</p>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-white/50 p-4 rounded-2xl backdrop-blur-sm">
+                <h5 class="font-bold text-gray-900 mb-2">Yorkshire</h5>
+                <p class="text-sm text-gray-600">Puppet cut, top knot</p>
+              </div>
+              <div class="bg-white/50 p-4 rounded-2xl backdrop-blur-sm">
+                <h5 class="font-bold text-gray-900 mb-2">Labrador</h5>
+                <p class="text-sm text-gray-600">Športový strih</p>
+              </div>
+            </div>
           </div>
-          <h4 class="text-2xl font-bold mb-3">Manikúra & pedikúra</h4>
-          <p class="text-gray-600 mb-6 leading-relaxed">
-            Gélovky, akryl, zdobenie. Dokonalé nechty pre každú príležitosť.
-          </p>
-          <p class="text-sm text-gray-500 mb-4">Od 20€ • 60-120 min</p>
-          <button class="w-full bg-gray-900 text-white py-3 rounded-full hover:bg-gradient-to-r hover:from-pink-500 hover:to-blue-500 transition-all duration-300">
-            Objednať
-          </button>
-        </div>
-
-        <!-- Služba 3 -->
-        <div class="group border border-gray-200 rounded-3xl p-8 hover:shadow-2xl hover:border-pink-200 transition-all duration-300">
-          <div class="w-16 h-16 bg-gradient-to-br from-pink-100 to-purple-200 rounded-2xl mb-6 flex items-center justify-center text-3xl">
-            ✨
-          </div>
-          <h4 class="text-2xl font-bold mb-3">Kozmetika & masáž</h4>
-          <p class="text-gray-600 mb-6 leading-relaxed">
-            Ošetrenie pleti, masáže tváre, lifting. Relaxácia a regenerácia.
-          </p>
-          <p class="text-sm text-gray-500 mb-4">Od 30€ • 60-90 min</p>
-          <button class="w-full bg-gray-900 text-white py-3 rounded-full hover:bg-gradient-to-r hover:from-pink-500 hover:to-blue-500 transition-all duration-300">
-            Objednať
-          </button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- O nás / Prečo my -->
-  <section class="py-24 px-6 bg-gradient-to-br from-gray-50 to-pink-50">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h3 class="text-4xl md:text-5xl font-bold mb-6">Prečo si vybrať Lunaris?</h3>
-        <div class="space-y-6">
-          <div class="flex gap-4">
-            <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-blue-500 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold">
-              1
+  <!-- TESTIMONIALS -->
+  <section class="py-32 bg-gradient-to-r from-pink-500 to-orange-400">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+      <h3 class="text-4xl md:text-5xl font-black mb-8">Čo hovoria majitelia</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white/20 backdrop-blur-xl p-8 rounded-3xl shadow-2xl">
+          <p class="text-xl mb-6 italic">"Sabina spravila z môjho Shi-Tzu hviezdu! Najlepší grooming v okolí."</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4">
+              <span class="text-2xl">⭐</span>
             </div>
             <div>
-              <h4 class="font-bold text-lg mb-1">15 rokov skúseností</h4>
-              <p class="text-gray-600">Certifikovaní profesionáli s medzinárodnou praxou</p>
+              <h5 class="font-bold">Zuzana K.</h5>
+              <p class="text-white/80 text-sm">Majiteľka Lulu</p>
             </div>
           </div>
-          <div class="flex gap-4">
-            <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-blue-500 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold">
-              2
-            </div>
-            <div>
-              <h4 class="font-bold text-lg mb-1">Prémiové produkty</h4>
-              <p class="text-gray-600">Spolupracujeme len s overenými značkami</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-blue-500 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold">
-              3
-            </div>
-            <div>
-              <h4 class="font-bold text-lg mb-1">Individuálny prístup</h4>
-              <p class="text-gray-600">Každý klient dostane personalizovanú konzultáciu</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="bg-gradient-to-br from-pink-200 to-blue-200 rounded-3xl h-96 flex items-center justify-center text-6xl">
-        🌸
-      </div>
-    </div>
-  </section>
-
-  <!-- Cenník -->
-  <section class="py-24 px-6 bg-white">
-    <div class="max-w-4xl mx-auto">
-      <h3 class="text-4xl md:text-5xl font-bold text-center mb-16">Cenník</h3>
-      <div class="space-y-4">
-        <div class="flex justify-between items-center border-b border-gray-200 py-4 hover:bg-gray-50 px-4 rounded-lg transition-colors">
-          <div>
-            <h4 class="font-semibold text-lg">Strihanie dámske</h4>
-            <p class="text-sm text-gray-600">60 min</p>
-          </div>
-          <span class="text-xl font-bold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">25€</span>
-        </div>
-        <div class="flex justify-between items-center border-b border-gray-200 py-4 hover:bg-gray-50 px-4 rounded-lg transition-colors">
-          <div>
-            <h4 class="font-semibold text-lg">Farbenie + strih</h4>
-            <p class="text-sm text-gray-600">120 min</p>
-          </div>
-          <span class="text-xl font-bold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">65€</span>
-        </div>
-        <div class="flex justify-between items-center border-b border-gray-200 py-4 hover:bg-gray-50 px-4 rounded-lg transition-colors">
-          <div>
-            <h4 class="font-semibold text-lg">Gélové nechty</h4>
-            <p class="text-sm text-gray-600">90 min</p>
-          </div>
-          <span class="text-xl font-bold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">35€</span>
-        </div>
-        <div class="flex justify-between items-center border-b border-gray-200 py-4 hover:bg-gray-50 px-4 rounded-lg transition-colors">
-          <div>
-            <h4 class="font-semibold text-lg">Kozmetické ošetrenie</h4>
-            <p class="text-sm text-gray-600">75 min</p>
-          </div>
-          <span class="text-xl font-bold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">45€</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Kontakt / CTA -->
-  <section class="py-24 px-6 bg-gradient-to-br from-pink-500 to-blue-500 text-white">
-    <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-4xl md:text-5xl font-bold mb-6">Pripravení na premenu?</h3>
-      <p class="text-xl mb-10 opacity-90">Rezervujte si termín online alebo nás kontaktujte telefonicky</p>
+  <!-- FOOTER -->
+  <footer id="kontakt" class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="w-24 h-24 bg-gradient-to-r from-pink-500 to-orange-500 rounded-3xl mx-auto mb-8 flex items-center justify-center shadow-2xl">
+        <span class="text-3xl">🐕</span>
+      </div>
+      <h3 class="text-3xl font-bold mb-6">Objednaj sa ešte dnes</h3>
+      <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+        Telefonicky, WhatsApp alebo online. Kapacita obmedzená.
+      </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-        <button class="bg-white text-gray-900 px-10 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300">
-          📅 Rezervovať online
-        </button>
-        <button class="border-2 border-white text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-pink-500 transition-all duration-300">
-          📞 +421 123 456 789
-        </button>
+        <a href="tel:+421905123456" class="bg-gradient-to-r from-pink-500 to-orange-500 px-8 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-pink-500/50 transform hover:-translate-y-1 transition-all">📞 Zavolať</a>
+        <a href="#" class="border-2 border-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white hover:text-gray-900 transition-all">💬 WhatsApp</a>
       </div>
-      <div class="text-sm opacity-75">
-        <p>Pon-Pia: 9:00 - 19:00 | Sob: 9:00 - 15:00</p>
-        <p class="mt-2">📍 Hlavná ulica 12, Bratislava</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 py-12 px-6">
-    <div class="max-w-7xl mx-auto text-center">
-      <h4 class="text-2xl font-bold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent mb-4">Lunaris</h4>
-      <p class="mb-4">© 2026 Lunaris Beauty Salón. Všetky práva vyhradené.</p>
-      <div class="flex justify-center gap-6 text-sm">
-        <a href="#" class="hover:text-white transition-colors">Instagram</a>
-        <a href="#" class="hover:text-white transition-colors">Facebook</a>
-        <a href="#" class="hover:text-white transition-colors">GDPR</a>
+      <div class="border-t border-gray-800 pt-8 text-gray-400">
+        <p>&copy; 2026 Grooming Salón Sabina. Všetky práva vyhradené.</p>
       </div>
     </div>
   </footer>
