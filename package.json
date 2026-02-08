@@ -1,26 +1,13 @@
 {
-  "name": "web_salon",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx @tailwindcss/cli --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Sabina0205/web_salon.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Sabina0205/web_salon/issues"
-  },
-  "homepage": "https://github.com/Sabina0205/web_salon#readme",
   "dependencies": {
     "@tailwindcss/cli": "^4.1.18",
     "tailwindcss": "^4.1.18"
+  },
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "prettier": "npx prettier --write **/*.html"
+  },
+  "devDependencies": {
+    "prettier-plugin-tailwindcss": "^0.7.2"
   }
 }
