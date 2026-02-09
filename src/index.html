@@ -9,39 +9,80 @@
 </head>
 
 <body class="min-h-screen bg-slate-50">
- 
+
   <!-- HERO SEKCIA -->
   <section class="h-screen bg-cover bg-center bg-no-repeat relative"
     style="background-image: url('./images/hero_photo.jpg')">
 
     <!-- NAVBAR -->
-    <header class="sticky top-0 z-50 p-4">
+    <header class="sticky top-0 z-10 p-4">
       <nav class="max-w-10xl mx-auto flex justify-between items-center px-8">
 
         <!-- LOGO -->
         <a href="#" class="flex items-center pl-16">
-          <img src="./images/logo_white_2480x1594.png" alt="TRENDY DOG" class="h-24 w-auto">
+          <img src="./images/logo_white_2480x1594.png" alt="TRENDY DOG" class="h-40 py-3 w-auto">
         </a>
 
         <!-- MENU VPRAVO -->
-        <ul class="flex space-x-8 text-lg text-white pr-16">
-          <li><a href="#domov"
-              class="px-4 py-2 rounded-lg hover:underline hover:underline-offset-10">DOMOV</a></li>
-          <li><a href="#sluzby"
-              class="px-4 py-2 rounded-lg hover:underline hover:underline-offset-10">SLUŽBY</a></li>
-          <li><a href="#cennik"
-              class="px-4 py-2 rounded-lg hover:underline hover:underline-offset-10">CENNÍK</a></li>
-          <li><a href="#galeria"
-              class="px-4 py-2 rounded-lg hover:underline hover:underline-offset-10">GALÉRIA</a></li>
-          <li><a href="#kontakt"
-              class="px-4 py-2 rounded-lg hover:underline hover:underline-offset-10">KONTAKT</a></li>
+        <ul class="flex space-x-8 text-lg text-white pr-16 font-bold">
+          <li><a href="#domov" class="px-4 py-2 rounded-lg hover:underline hover:underline-offset-10">DOMOV</a></li>
+          <li><a href="#sluzby" class="px-4 py-2 rounded-lg hover:underline hover:underline-offset-10">SLUŽBY</a></li>
+          <li><a href="#cennik" class="px-4 py-2 rounded-lg hover:underline hover:underline-offset-10">CENNÍK</a></li>
+          <li><a href="#galeria" class="px-4 py-2 rounded-lg hover:underline hover:underline-offset-10">GALÉRIA</a></li>
+          <li><a href="#kontakt" class="px-4 py-2 rounded-lg hover:underline hover:underline-offset-10">KONTAKT</a></li>
         </ul>
       </nav>
     </header>
-    <div class="absolute inset-0 bg-black/40 z-0"></div>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis expedita dolores earum minima voluptas beatae praesentium. Maiores a voluptate ducimus! Natus consequuntur nisi animi saepe modi sit ipsum explicabo est.</p>
-    <h1>TRENDY DOG psí salón</h1>
+    <!-- HERO text -->
+    <article class="relative top-165 w-[60%]">
+      <div class="flex flex-col ml-20">
+        <h1 class=" text-white font-extrabold text-8xl z-10 mb-10">TRENDY DOG <span class="bg-linear-to-r from-pink-300 via-purple-300 to-blue-300
+           bg-clip-text text-transparent">psí salón</span></h1>
+        <p class=" text-gray-300 z-10 w-max-100 text-justify text-2xl w-[85%]">
+          Profesionálne služby poskytované pre vašich štvornohých miláčikov v Dubnici nad Váhom.
+        </p>
+
+        <!-- LINK BUTTONS TO CONTACT -->
+        <div class="flex row gap-10 mt-10">
+          <!-- PHONE -->
+          <div class="z-10 text-white bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 p-4 rounded-2xl">
+            <a href="tel:+421905123456">
+              <div class="items-center justify-center">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+          <!-- MESSENGER -->
+          <div class="z-10 text-white bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 p-4 rounded-2xl">
+            <a href="https://m.me/100043366519536" target="_blank">
+              <div class="items-center justify-center">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+          <!-- FACEBOOK -->
+          <div class="z-10 text-white bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 p-4 rounded-2xl">
+            <a href="https://www.facebook.com/people/Trendy-dog-ps%C3%AD-sal%C3%B3n/100043366519536/" target="_blank">
+              <div class="items-center justify-center">
+                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </article>
+    <div class="absolute inset-0 bg-black/50 z-0"></div>
   </section>
 
 </body>
