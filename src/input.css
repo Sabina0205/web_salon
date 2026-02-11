@@ -3,7 +3,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Titan+One&display=swap');
 
 @layer base {
-  p {
+  p, h1 {
     font-family: 'Sour Gummy', cursive;
+  }
+}
+
+@layer utilities {
+  .hero-bg {
+    background-image: url('./images/hero_mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: 768px) {
+    .hero-bg {
+      background-image: url('./images/hero_desktop.jpg');
+    }
   }
 }

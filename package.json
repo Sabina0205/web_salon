@@ -3,11 +3,16 @@
     "@tailwindcss/cli": "^4.1.18",
     "tailwindcss": "^4.1.18"
   },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.7.2"
+  },
   "scripts": {
     "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
-    "prettier": "npx prettier --write **/*.html"
+    "prettier": "npx prettier --write src/**/*.html"
   },
-  "devDependencies": {
-    "prettier-plugin-tailwindcss": "^0.7.2"
+  "prettier": {
+    "plugins": ["prettier-plugin-tailwindcss"],
+    "tailwindStylesheet": "./src/input.css"
   }
 }
