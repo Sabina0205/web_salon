@@ -10,7 +10,14 @@
 
 @layer utilities {
   .hero-bg {
-    background-image: url('./images/hero_mobile.jpg');
+    background-image: url('./images/hero_mobile2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .services-bg {
+    background-image: url('./images/services_mobile.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -18,7 +25,10 @@
 
   @media (min-width: 768px) {
     .hero-bg {
-      background-image: url('./images/hero_desktop.jpg');
+      background-image: url('./images/hero_desktop2.jpg');
+    }
+    .services-bg {
+      background-image: url('./images/services_desktop.jpg');
     }
   }
 }
