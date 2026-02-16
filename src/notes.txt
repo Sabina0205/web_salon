@@ -1,0 +1,73 @@
+<!-- SECTION SLUŽBY -->
+<section class="services-bg relative min-h-screen sm:pt-4 flex justify-center items-center">
+  <div class="bg-white/70 z-50 max-w-[90%] mt-10 p-6 lg:max-w-[60%] rounded-3xl shadow-2xl backdrop-blur-md">
+    
+    <!-- Header + Obrázok -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
+      <h1 class="uppercase text-5xl lg:text-6xl font-extrabold text-center lg:text-left text-gray-800">naše služby</h1>
+      <img src="./images/services/alektas-grooming-6894992_1920.jpg" alt="TRENDY DOG" class="w-full h-64 lg:h-80 object-cover rounded-2xl shadow-lg" />
+    </div>
+
+    <!-- ACCORDION -->
+    <div class="space-y-3">
+      
+      <!-- Strihanie -->
+      <div class="accordion-item overflow-hidden rounded-xl bg-white/60 backdrop-blur-sm shadow-sm border border-white/50">
+        <button class="accordion-header w-full flex items-center justify-between py-5 px-6 text-left font-semibold text-gray-900 hover:bg-white/80 transition-all duration-200 focus:outline-none">
+          <span class="uppercase tracking-wide text-lg">strihanie</span>
+          <i class="fa-solid fa-chevron-down text-gray-500 ml-auto transition-transform duration-300 ease-in-out"></i>
+        </button>
+        <div class="accordion-content h-0 px-6 pb-6 overflow-hidden bg-gradient-to-r from-blue-50/90 to-indigo-50/90 transition-all duration-500 ease-out opacity-0">
+          <p class="text-gray-700 leading-relaxed pt-2">Profesionálne strihanie podľa plemena a želania majiteľa. Všetky veľkosti a typy srsti.</p>
+        </div>
+      </div>
+
+      <!-- Kúpanie -->
+      <div class="accordion-item overflow-hidden rounded-xl bg-white/60 backdrop-blur-sm shadow-sm border border-white/50">
+        <button class="accordion-header w-full flex items-center justify-between py-5 px-6 text-left font-semibold text-gray-900 hover:bg-white/80 transition-all duration-200 focus:outline-none">
+          <span class="uppercase tracking-wide text-lg">kúpanie</span>
+          <i class="fa-solid fa-chevron-down text-gray-500 ml-auto transition-transform duration-300 ease-in-out"></i>
+        </button>
+        <div class="accordion-content h-0 px-6 pb-6 overflow-hidden bg-gradient-to-r from-emerald-50/90 to-teal-50/90 transition-all duration-500 ease-out opacity-0">
+          <p class="text-gray-700 leading-relaxed pt-2">Kvalitné šampóny, kondicionéry a sušenie. Teplá voda, bez stresu pre psa.</p>
+        </div>
+      </div>
+
+      <!-- Ostatné položky rovnako... -->
+    </div>
+  </div>
+
+  <div class="absolute inset-0 z-0 bg-black/50"></div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const headers = document.querySelectorAll('.accordion-header');
+  
+  headers.forEach(header => {
+    header.addEventListener('click', function() {
+      const content = this.parentElement.querySelector('.accordion-content');
+      const icon = this.querySelector('i');
+      const isOpen = content.classList.contains('h-64');
+      
+      // ZATVOR VŠETKY
+      document.querySelectorAll('.accordion-content').forEach(c => {
+        c.classList.remove('h-64', 'opacity-100');
+        c.classList.add('h-0', 'opacity-0');
+        c.style.height = '0px';
+      });
+      document.querySelectorAll('.fa-chevron-down').forEach(i => {
+        i.classList.remove('rotate-180');
+      });
+      
+      // OTVOŔ TÚTO (ak nebola otvorená)
+      if (!isOpen) {
+        content.classList.remove('h-0', 'opacity-0');
+        content.classList.add('h-64', 'opacity-100');
+        content.style.height = 'auto';
+        icon.classList.add('rotate-180');
+      }
+    });
+  });
+});
+</script>

@@ -2,8 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Titan+One&display=swap');
 
+@theme {
+  --breakpoint-3xl: 118.75rem;
+}
+
 @layer base {
-  p, h1, h2 {
+  p, h1, h2, div {
     font-family: 'Sour Gummy', cursive;
   }
 }
