@@ -22,11 +22,11 @@
 
 <body class="overflow-x-hidden bg-slate-50">
   <!-- HERO SEKCIA -->
-  <section class="hero-bg relative flex min-h-screen flex-col sm:pt-4">
+  <section id="domov" class="hero-bg relative flex min-h-screen flex-col sm:pt-4">
     <!-- NAVBAR -->
     <header class="sticky top-0 z-50 flex w-full items-center justify-between bg-transparent px-4 py-3 ">
       <!-- LOGO -->
-      <a href="#" class="z-50">
+      <a href="#domov" class="z-50">
         <img src="./images/logo_white_2480x1594.png" alt="TRENDY DOG"
           class="h-20 max-w-full sm:h-32 2xl:h-36 ml-2 md:ml-6 xl:ml-15" />
       </a>
@@ -40,19 +40,19 @@
       <nav class="z-50 hidden lg:flex lg:items-center mr-2 md:mr-6 xl:mr-15">
         <ul class="flex gap-10 text-lg font-bold text-white lg:text-lg xl:text-xl 2xl:text-2xl">
           <li>
-            <a href="#domov" class="rounded-lg hover:underline hover:underline-offset-10">DOMOV</a>
+            <a href="#domov" class="rounded-lg">DOMOV</a>
           </li>
           <li>
-            <a href="#sluzby" class="rounded-lg hover:underline hover:underline-offset-10">SLUŽBY</a>
+            <a href="#sluzby" class="rounded-lg">SLUŽBY</a>
           </li>
           <li>
-            <a href="#cennik" class="rounded-lg hover:underline hover:underline-offset-10">CENNÍK</a>
+            <a href="#cennik" class="rounded-lg">CENNÍK</a>
           </li>
           <li>
-            <a href="#galeria" class="rounded-lg hover:underline hover:underline-offset-10">GALÉRIA</a>
+            <a href="#galeria" class="rounded-lg">GALÉRIA</a>
           </li>
           <li>
-            <a href="#kontakt" class="rounded-lg hover:underline hover:underline-offset-10">KONTAKT</a>
+            <a href="#kontakt" class="rounded">KONTAKT</a>
           </li>
         </ul>
       </nav>
@@ -204,7 +204,7 @@
 
 
   <!-- SECTION SLUŽBY -->
-  <section class="services-bg relative min-h-screen sm:pt-4 flex justify-center items-center">
+  <section id="sluzby" class="services-bg relative min-h-screen sm:pt-4 flex justify-center items-center">
 
     <div class="bg-white/70 z-50 max-w-[90%] max-h-auto mt-10 mb-10 p-4 lg:p-8 xl:p-12 rounded-2xl">
       <h1
@@ -237,7 +237,7 @@
 
           <div class="flex items-center justify-between bg-white/80 rounded-lg p-4 lg:p-6 shadow-md">
             <div class="flex items-center gap-3">
-              <img src="./images/pet-brush.png" alt="Hrebeň" class="w-8 h-8 object-contain">
+                  <img src="./images/icons/brush.png" alt="Hrebeň" class="h-10 object-contain">
               <div class="uppercase">vyčesávanie, rozčesávanie, trímovanie</div>
             </div>
             <i class="fa-solid fa-chevron-down text-black/30"></i>
@@ -267,6 +267,42 @@
     <div class="absolute inset-0 z-0 bg-black/50"></div>
   </section>
 
+    <!--PRICES PAWS-->
+  <section>
+    <h1
+      class="uppercase mt-10 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 text-5xl sm:text-6xl md:text-7xl 3xl:text-8xl bg-clip-text text-transparent font-extrabold text-center">
+      cenník</h1>
+    <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 max-h-screen p-10 lg:mt-10">
+      <!--FIRST PAW-->
+      <div class="flex flex-col items-center gap-4 p-8 md:col-span-2 lg:col-span-1 overflow-hidden ">
+        <img src="./images/paws/paw_s.png" class="max-w-[50%] sm:max-w-[60%] md:max-w-[80%] h-auto object-contain">
+        <p class="text-center text-lg sm:text-2xl xl:text-3xl">Yorkšírky teriér, Maltézsky psík..</p>
+      </div>
+      <!--SECOND PAW-->
+      <div class="flex flex-col items-center gap-4 p-8 md:col-span-2 lg:col-span-1 overflow-hidden">
+        <img src="./images/paws/paw_m.png" class="max-w-[50%] sm:max-w-[60%] md:max-w-[80%] h-auto object-contain">
+        <p class="text-center text-lg sm:text-2xl xl:text-3xl">Anglický kokeršpaniel, Stredný pudel..</p>
+      </div>
+      <!--THIRD PAW-->
+      <div class="flex flex-col items-center gap-4 p-8 md:col-span-2 lg:col-span-1 overflow-hidden ">
+        <img src="./images/paws/paw_l.png" class="max-w-[50%] sm:max-w-[60%] md:max-w-[80%] h-auto object-contain">
+        <p class="text-center text-lg sm:text-2xl xl:text-3xl">Erdel teriér...</p>
+      </div>
+
+      <!--FOURTH PAW-->
+      <div class="flex flex-col items-center gap-4 p-8 md:col-span-2 md:col-start-2 lg:col-span-1">
+        <img src="./images/paws/paw_xl.png" class="max-w-[50%] sm:max-w-[60%] md:max-w-[80%] h-auto object-contain">
+        <p class="text-center text-lg sm:text-2xl xl:text-3xl">Zlatý retvíver, Labrador..</p>
+      </div>
+      <!--FIFTH PAW-->
+      <div class="flex flex-col items-center gap-4 p-8 md:col-span-2 lg:col-span-1">
+        <img src="./images/paws/paw_xxl.png" class="max-w-[50%] sm:max-w-[60%] md:max-w-[80%] h-auto object-contain">
+        <p class="text-center text-lg sm:text-2xl xl:text-3xl">
+          Kráľovský pudel, Bobtail..
+        </p>
+      </div>
+  </section>
+  
 </body>
 
 </html>

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="./images/favicon_io_black_bgwhite/favicon.ico">
   <link rel="icon" href="./images/favicon_io_black/favicon.ico" media="(prefers-color-scheme: light)">
   <link rel="icon" href="./images/favicon_io_white/favicon.ico" media="(prefers-color-scheme: dark)">
 </head>
@@ -22,7 +23,7 @@
 
 <body class="overflow-x-hidden bg-slate-50">
   <!-- HERO SEKCIA -->
-  <section class="hero-bg relative flex min-h-screen flex-col sm:pt-4">
+  <section id="domov" class="hero-bg relative flex min-h-screen flex-col sm:pt-4">
     <!-- NAVBAR -->
     <header class="sticky top-0 z-50 flex w-full items-center justify-between bg-transparent px-4 py-3 ">
       <!-- LOGO -->
@@ -204,7 +205,7 @@
 
 
   <!-- SECTION SLUŽBY -->
-  <section class="services-bg relative min-h-screen sm:pt-4 flex justify-center items-center">
+  <section id="sluzby" class="services-bg relative min-h-screen sm:pt-4 flex justify-center items-center">
 
     <div class="bg-white/70 z-50 max-w-[90%] max-h-auto mt-10 mb-10 p-4 lg:p-8 xl:p-12 rounded-2xl">
       <h1
@@ -251,12 +252,11 @@
             </details>
           </div>
 
-
           <div class="bg-white/90 rounded-lg p-4 lg:p-6 shadow-md">
             <details class="group">
               <summary class="flex items-center justify-between">
                 <div class="flex items-center gap-3">
-                  <img src="./images/pet-brush.png" alt="Hrebeň" class="w-8 h-8 object-contain">
+                  <img src="./images/icons/brush.png" alt="Hrebeň" class="h-10 object-contain">
                   <h1 class="uppercase font-semibold ">vyčesávanie, rozčesávanie, trímovanie</h1>
                 </div>
                 <i class="fa-solid fa-chevron-down text-black/30 ml-auto group-open:rotate-180"></i>
@@ -305,6 +305,45 @@
 
     <div class="absolute inset-0 z-0 bg-black/50"></div>
   </section>
+
+  <!--PRICES PAWS-->
+  <section id="cennik">
+    <h1
+      class="uppercase mt-10 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 text-5xl sm:text-6xl md:text-7xl 3xl:text-8xl bg-clip-text text-transparent font-extrabold text-center">
+      cenník</h1>
+    <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 max-h-screen p-10 lg:mt-10">
+      <!--FIRST PAW-->
+      <div class="flex flex-col items-center gap-4 p-8 md:col-span-2 lg:col-span-1 overflow-hidden ">
+        <img src="./images/paws/paw_s.png" class="max-w-[50%] sm:max-w-[60%] md:max-w-[80%] h-auto object-contain">
+        <p class="text-center text-lg sm:text-2xl xl:text-3xl">Yorkšírky teriér, Maltézsky psík..</p>
+      </div>
+      <!--SECOND PAW-->
+      <div class="flex flex-col items-center gap-4 p-8 md:col-span-2 lg:col-span-1 overflow-hidden">
+        <img src="./images/paws/paw_m.png" class="max-w-[50%] sm:max-w-[60%] md:max-w-[80%] h-auto object-contain">
+        <p class="text-center text-lg sm:text-2xl xl:text-3xl">Anglický kokeršpaniel, Stredný pudel..</p>
+      </div>
+      <!--THIRD PAW-->
+      <div class="flex flex-col items-center gap-4 p-8 md:col-span-2 lg:col-span-1 overflow-hidden ">
+        <img src="./images/paws/paw_l.png" class="max-w-[50%] sm:max-w-[60%] md:max-w-[80%] h-auto object-contain">
+        <p class="text-center text-lg sm:text-2xl xl:text-3xl">Erdel teriér...</p>
+      </div>
+
+      <!--FOURTH PAW-->
+      <div class="flex flex-col items-center gap-4 p-8 md:col-span-2 md:col-start-2 lg:col-span-1">
+        <img src="./images/paws/paw_xl.png" class="max-w-[50%] sm:max-w-[60%] md:max-w-[80%] h-auto object-contain">
+        <p class="text-center text-lg sm:text-2xl xl:text-3xl">Zlatý retvíver, Labrador..</p>
+      </div>
+      <!--FIFTH PAW-->
+      <div class="flex flex-col items-center gap-4 p-8 md:col-span-2 lg:col-span-1">
+        <img src="./images/paws/paw_xxl.png" class="max-w-[50%] sm:max-w-[60%] md:max-w-[80%] h-auto object-contain">
+        <p class="text-center text-lg sm:text-2xl xl:text-3xl">
+          Kráľovský pudel, Bobtail..
+        </p>
+      </div>
+  </section>
+
+  <!--PRICES LIST-->
+
 
 </body>
 
