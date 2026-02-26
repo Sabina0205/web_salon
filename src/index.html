@@ -15,13 +15,9 @@
   <link rel="icon" href="./images/favicon_io_white/favicon.ico" media="(prefers-color-scheme: dark)">
 </head>
 
-<style>
-  html {
-    overflow-x: hidden;
-  }
-</style>
 
-<body class="overflow-x-hidden bg-slate-50">
+
+<body class=" bg-slate-50">
   <!-- HERO SEKCIA -->
   <section id="domov" class="hero-bg relative flex min-h-screen flex-col sm:pt-4">
     <!-- NAVBAR -->
@@ -203,108 +199,81 @@
   </section>
 
 
+  <section id="sluzby" class="min-h-[500vh]py-20 md:px-12 lg:px-20 pt-32 bg-black">
+  <div class="w-full lg:max-w-7xl">
+    
+    <!-- HLAVNÝ NADPIS -->
+    <div class="text-center mb-24">
+      <h1 class="uppercase text-6xl md:text-7xl lg:text-8xl font-black bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+        Naše služby
+      </h1>
+    </div>
 
-  <!-- SECTION SLUŽBY -->
-  <section id="sluzby" class="services-bg relative min-h-screen sm:pt-4 flex justify-center items-center">
+    <!-- GRID -->
+    <div class="grid lg:grid-cols-2 items-start">
+      
+      <!-- STICKY OBRÁZOK -->
+      <div class="sticky min-h-screen inset-0 lg:top-32">
+        <img src="./images/services/alektas-grooming-6894992_1920.jpg" alt="Grooming" 
+             class="w-full lg:max-w-2xl  object-cover">
+      </div>
 
-    <div class="bg-white/70 z-50 max-w-[90%] max-h-auto mt-10 mb-10 p-4 lg:p-8 xl:p-12 rounded-2xl">
-      <h1
-        class="uppercase bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 text-5xl sm:text-6xl md:text-7xl 3xl:text-8xl bg-clip-text text-transparent font-extrabold text-center">
-        naše služby</h1>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-4 lg:gap-8 xl:gap-0 lg:items-center xl:my-5">
-        <img src="./images/services/alektas-grooming-6894992_1920.jpg" alt="TRENDY DOG"
-          class="w-full sm:w-100 md:w-120 lg:h-[90%] 3xl:w-150 object-cover rounded-2xl mt-4 lg:mt-0 mx-auto" />
-
-        <!--ACCORDION-->
-        <div
-          class="flex flex-col text-black font-bold text-xl md:text-2xl 3xl:text-3xl mt-2 text-left space-y-2 lg:space-y-4 ">
-
-          <div class="bg-white/90 rounded-lg p-4 lg:p-6 shadow-md">
-            <details class="group">
-              <summary class="flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-scissors  text-blue-500"></i>
-                  <h1 class="uppercase font-semibold ">Strihanie</h1>
-                </div>
-                <i class="fa-solid fa-chevron-down text-black/30 ml-auto group-open:rotate-180"></i>
-              </summary>
-              <div class="px-4 pb-4 mt-2">
-                <p class="text-gray-700 text-lg pt-4">Profesionálne strihanie podľa štandardov plemena aj moderné trendy
-                  strihy. Individuálny prístup k výstavným aj domácim psom. Používame kvalitné nástroje pre dokonalý
-                  vzhľad.</p>
-              </div>
-            </details>
+      <!-- SLUŽBY -->
+      <div class="space-y-32 p-4">
+        <!-- 1. STRIHANIE -->
+        <div class="service-item flex min-h-[80vh] items-center">
+          <div class="w-full text-right">
+            <h2 class="service-title text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent mb-8">Strihanie</h2>
+            <p class="service-copy max-w-xl ml-auto text-xl md:text-2xl lg:text-3xl text-gray-200 leading-relaxed font-light">
+              Profesionálne strihanie podľa štandardov plemena aj moderné trendy strihy
+            </p>
           </div>
+        </div>
 
-          <div class="bg-white/90 rounded-lg p-4 lg:p-6 shadow-md">
-            <details class="group">
-              <summary class="flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-shower text-purple-500"></i>
-                  <h1 class="uppercase font-semibold ">kúpanie</h1>
-                </div>
-                <i class="fa-solid fa-chevron-down text-black/30 ml-auto group-open:rotate-180"></i>
-              </summary>
-              <div class="px-4 pb-4 mt-2">
-                <p class="text-gray-700 text-lg pt-4">Komplexné kúpanie s hypoalergénnymi šampónmi prémiových značiek.
-                  Dvojfázové umytie, jemná masáž srsťe, profesionálne sušenie fénom a kompresorom pre krásny lesk.</p>
-              </div>
-            </details>
+        <!-- 2. KÚPANIE -->
+        <div class="service-item flex min-h-[80vh] items-center">
+          <div class="w-full text-right">
+            <h2 class="service-title text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600 bg-clip-text text-transparent mb-8">Kúpanie</h2>
+            <p class="service-copy max-w-xl ml-auto text-xl md:text-2xl lg:text-3xl text-gray-200 leading-relaxed font-light">
+              Komplexné kúpanie s hypoalergénnymi šampónmi prémiových značiek
+            </p>
           </div>
+        </div>
 
-          <div class="bg-white/90 rounded-lg p-4 lg:p-6 shadow-md">
-            <details class="group">
-              <summary class="flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                  <img src="./images/icons/brush.png" alt="Hrebeň" class="h-10 object-contain">
-                  <h1 class="uppercase font-semibold ">vyčesávanie, rozčesávanie, trímovanie</h1>
-                </div>
-                <i class="fa-solid fa-chevron-down text-black/30 ml-auto group-open:rotate-180"></i>
-              </summary>
-              <div class="px-4 pb-4 mt-2">
-                <p class="text-gray-700 text-lg pt-4">Dôkladné vyčesávanie pre odstránenie podsady a prevenciu matov.
-                  Ručné trímovanie pre drsné srsti (terieri, špice). Komplexná starostlivosť o zdravie srsťe vášho psa.
-                </p>
-              </div>
-            </details>
+        <!-- 3. VYČESÁVANIE -->
+        <div class="service-item flex min-h-[80vh] items-center">
+          <div class="w-full text-right">
+            <h2 class="service-title text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-gradient-to-r from-pink-400 via-red-500 to-pink-600 bg-clip-text text-transparent mb-8">Vyčesávanie</h2>
+            <p class="service-copy max-w-xl ml-auto text-xl md:text-2xl lg:text-3xl text-gray-200 leading-relaxed font-light">
+              Dôkladné vyčesávanie pre odstránenie podsady a prevenciu matov
+            </p>
           </div>
+        </div>
 
-          <div class="bg-white/90 rounded-lg p-4 lg:p-6 shadow-md">
-            <details class="group">
-              <summary class="flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-hand-holding-heart text-red-600"></i>
-                  <h1 class="uppercase font-semibold ">drobné úpravy</h1>
-                </div>
-                <i class="fa-solid fa-chevron-down text-black/30 ml-auto group-open:rotate-180"></i>
-              </summary>
-              <div class="px-4 pb-4 mt-2">
-                <p class="text-gray-700 text-lg pt-4">Úprava hlavy, labiek a zadočku pre dokonalý vzhľad.</p>
-              </div>
-            </details>
+        <!-- 4. DROBNÉ ÚPRAVY -->
+        <div class="service-item flex min-h-[80vh] items-center">
+          <div class="w-full text-right">
+            <h2 class="service-title text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-gradient-to-r from-orange-400 via-red-500 to-orange-600 bg-clip-text text-transparent mb-8">Drobné úpravy</h2>
+            <p class="service-copy max-w-xl ml-auto text-xl md:text-2xl lg:text-3xl text-gray-200 leading-relaxed font-light">
+              Úprava hlavy, labiek a zadočku pre dokonalý vzhľad
+            </p>
           </div>
+        </div>
 
-          <div class="bg-white/90 rounded-lg p-4 lg:p-6 shadow-md">
-            <details class="group">
-              <summary class="flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-hand-sparkles text-amber-400"></i>
-                  <h1 class="uppercase font-semibold ">doplnkové služby</h1>
-                </div>
-                <i class="fa-solid fa-chevron-down text-black/30 ml-auto group-open:rotate-180"></i>
-              </summary>
-              <div class="px-4 pb-4 mt-2">
-                <p class="text-gray-700 text-lg pt-4">Strihanie pazúrikov, depilácia uší, čistenie uší a očí.</p>
-              </div>
-            </details>
+        <!-- 5. DOPLNKOVÉ -->
+        <div class="service-item flex min-h-[80vh] items-center">
+          <div class="w-full text-right">
+            <h2 class="service-title text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-gradient-to-r from-emerald-400 via-teal-500 to-emerald-600 bg-clip-text text-transparent mb-8">Doplnkové služby</h2>
+            <p class="service-copy max-w-xl ml-auto text-xl md:text-2xl lg:text-3xl text-gray-200 leading-relaxed font-light">
+              Strihanie pazúrikov, depilácia uší, čistenie uší a očí
+            </p>
           </div>
-
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="absolute inset-0 z-0 bg-black/50"></div>
-  </section>
 
   <!--PRICES PAWS-->
   <section id="cennik" class="min-h-screen">
@@ -578,6 +547,7 @@
 
     <div class="absolute inset-0 z-0 bg-black/50"></div>
   </section>
+
 
 </body>
 

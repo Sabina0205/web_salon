@@ -8,7 +8,7 @@
 
 @layer base {
   p, h1, h2, div {
-    font-family: 'Sour Gummy', cursive;
+    font-family: 'Sour Gummy', cursive, sans-serif;
   }
 }
 
@@ -35,8 +35,4 @@
       background-image: url('./images/services_desktop.jpg');
     }
   }
-}
-
-html, body {
-  overflow-x: hidden;
 }
