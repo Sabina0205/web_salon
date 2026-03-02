@@ -81,4 +81,53 @@
 #l:checked ~ .overlay .content-l { display: block; }
 #xl:checked ~ .overlay .content-xl { display: block; }
 #xxl:checked ~ .overlay .content-xxl { display: block; }
+
+
+#galeria {
+  @apply overflow-hidden;
+}
+
+.slider {
+  @apply relative h-50 sm:h-120 md:h-180 mx-auto overflow-hidden md:py-20;
+}
+
+.slide-track {
+  @apply flex w-max;
+  animation: scroll 120s linear infinite;
+}
+
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.slide {
+  @apply flex shrink-0 w-35 sm:w-50 md:w-87.5 h-full p-3 md:p-4;
+}
+
+.slide img {
+  @apply w-full h-full object-cover rounded-xl transition duration-500;
+}
+
+.slide img:hover {
+  @apply scale-140;
+}
+
+.slider::before,
+.slider::after {
+  content: '';
+  @apply absolute top-0 h-full w-[15%] z-20 pointer-events-none;
+}
+
+.slider::before {
+  @apply left-0 bg-linear-to-r from-white/60 to-transparent;
+}
+
+.slider::after {
+  @apply right-0 bg-linear-to-l from-white/60 to-transparent;
+}
 }
