@@ -35,4 +35,50 @@
       background-image: url('./images/services_desktop.jpg');
     }
   }
+
+/* PRICE SECTION*/
+.paw {
+  @apply w-28 sm:w-36 md:w-25 lg:w-32 xl:w-40 3xl:w-48 h-auto mx-auto transition duration-300 pt-8;
+}
+.paw p {
+  @apply pt-5 text-xl px-2 xl:text-2xl;
+}
+
+.content {
+  @apply hidden;
+}
+
+.content div {
+  @apply pt-6;
+}
+
+.title {
+  @apply text-5xl md:text-6xl font-bold text-center mb-12 text-shadow-xs text-shadow-sky-100/60;
+}
+
+
+/* ZOBRAZENIE */
+
+#s:checked ~ .overlay,
+#m:checked ~ .overlay,
+#l:checked ~ .overlay,
+#xl:checked ~ .overlay,
+#xxl:checked ~ .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#s:checked ~ .overlay .panel,
+#m:checked ~ .overlay .panel,
+#l:checked ~ .overlay .panel,
+#xl:checked ~ .overlay .panel,
+#xxl:checked ~ .overlay .panel {
+  transform: scale(1);
+}
+
+#s:checked ~ .overlay .content-s { display: block; }
+#m:checked ~ .overlay .content-m { display: block; }
+#l:checked ~ .overlay .content-l { display: block; }
+#xl:checked ~ .overlay .content-xl { display: block; }
+#xxl:checked ~ .overlay .content-xxl { display: block; }
 }

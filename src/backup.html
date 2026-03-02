@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="sk">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRENDY DOG psí salón</title>
+  <link rel="stylesheet" href="./output.css" />
+  <link rel="stylesheet" href="./input.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="./images/favicon_io_black_bgwhite/favicon.ico">
+  <link rel="icon" href="./images/favicon_io_black/favicon.ico" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="./images/favicon_io_white/favicon.ico" media="(prefers-color-scheme: dark)">
+</head>
+
+
+
+<body class=" bg-slate-50">
+  <!-- HERO SEKCIA -->
+  <section id="domov" class="hero-bg relative flex min-h-screen flex-col sm:pt-4">
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 flex w-full items-center justify-between bg-transparent px-4 py-3 ">
+      <!-- LOGO -->
+      <a href="#" class="z-50">
+        <img src="./images/logo_white_2480x1594.png" alt="TRENDY DOG"
+          class="h-20 max-w-full sm:h-32 2xl:h-36 ml-2 md:ml-6 xl:ml-15" />
+      </a>
+
+      <!-- MENU ICON -->
+      <button class="toggle-button z-50 pr-2 text-2xl text-white sm:pr-4 sm:text-3xl lg:hidden">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- DESKTOP MENU -->
+      <nav class="z-50 hidden lg:flex lg:items-center mr-2 md:mr-6 xl:mr-15">
+        <ul class="flex gap-10 text-lg font-bold text-white lg:text-lg xl:text-xl 2xl:text-2xl">
+          <li>
+            <a href="#domov" class="rounded-lg hover:underline hover:underline-offset-10">DOMOV</a>
+          </li>
+          <li>
+            <a href="#sluzby" class="rounded-lg hover:underline hover:underline-offset-10">SLUŽBY</a>
+          </li>
+          <li>
+            <a href="#cennik" class="rounded-lg hover:underline hover:underline-offset-10">CENNÍK</a>
+          </li>
+          <li>
+            <a href="#galeria" class="rounded-lg hover:underline hover:underline-offset-10">GALÉRIA</a>
+          </li>
+          <li>
+            <a href="#kontakt" class="rounded-lg hover:underline hover:underline-offset-10">KONTAKT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <nav
+      class="dropdown-menu fixed inset-0 z-40 flex hidden flex-col items-center justify-center gap-4 overflow-hidden bg-black/40 text-white backdrop-blur-md">
+      <ul class="flex flex-col items-center gap-3 space-y-8 text-lg font-bold text-white">
+        <li>
+          <a href="#domov" class="rounded-lg hover:underline hover:underline-offset-10">DOMOV</a>
+        </li>
+        <li>
+          <a href="#sluzby" class="rounded-lg hover:underline hover:underline-offset-10">SLUŽBY</a>
+        </li>
+        <li>
+          <a href="#cennik" class="rounded-lg hover:underline hover:underline-offset-10">CENNÍK</a>
+        </li>
+        <li>
+          <a href="#galeria" class="rounded-lg hover:underline hover:underline-offset-10">GALÉRIA</a>
+        </li>
+        <li>
+          <a href="#kontakt" class="rounded-lg hover:underline hover:underline-offset-10">KONTAKT</a>
+        </li>
+      </ul>
+    </nav>
+
+    <script>
+      const toggleBtn = document.querySelector(".toggle-button");
+      const dropdown = document.querySelector(".dropdown-menu");
+
+      toggleBtn.addEventListener("click", () => {
+        dropdown.classList.toggle("hidden");
+      });
+    </script>
+
+    <!-- SPACE -->
+    <div class="flex-1"></div>
+
+    <!-- HERO text -->
+    <article class="flex items-start px-4 pb-10 sm:w-[70%] md:p-10 lg:px-10 2xl:px-15">
+      <div class="flex flex-col justify-end">
+        <h1 class="z-10 text-5xl font-extrabold text-white sm:text-7xl xl:text-8xl">
+          TRENDY DOG
+        </h1>
+        <h2
+          class="z-10 bg-linear-to-r from-pink-300 via-purple-300 to-blue-300 bg-clip-text pb-2 text-5xl font-extrabold text-transparent sm:text-7xl xl:text-8xl">
+          psí salón
+        </h2>
+        <p
+          class="z-10 py-4 text-left text-lg text-gray-300 sm:text-2xl md:text-justify lg:w-[85%] xl:w-[70%] xl:text-3xl">
+          Profesionálne služby poskytované pre vašich štvornohých miláčikov v
+          Dubnici nad Váhom.
+        </p>
+
+        <!-- LINK BUTTONS TO CONTACT -->
+        <div class="flex gap-2 sm:gap-4 xl:gap-8">
+          <!-- PHONE -->
+          <div
+            class="z-10 rounded-xl bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 p-2 text-white sm:p-4 lg:rounded-2xl">
+            <a href="tel:+421905123456">
+              <div class="flex items-center justify-center">
+                <svg class="h-10 w-10 sm:h-12 sm:w-12 xl:h-15 xl:w-15 2xl:h-20 2xl:w-20" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+          <!-- MESSENGER -->
+          <div class="z-10 rounded-xl bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 p-2 text-white sm:p-4">
+            <a href="https://m.me/100043366519536" target="_blank">
+              <div class="flex items-center justify-center">
+                <svg class="h-10 w-10 sm:h-12 sm:w-12 xl:h-15 xl:w-15 2xl:h-20 2xl:w-20" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+          <!-- FACEBOOK -->
+          <div class="z-10 rounded-xl bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 p-2 text-white sm:p-4">
+            <a href="https://www.facebook.com/people/Trendy-dog-ps%C3%AD-sal%C3%B3n/100043366519536/" target="_blank">
+              <div class="flex items-center justify-center">
+                <svg class="h-10 w-10 sm:h-12 sm:w-12 xl:h-15 xl:w-15 2xl:h-20 2xl:w-20" fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <div class="absolute inset-0 z-0 bg-black/50"></div>
+  </section>
+
+  <!-- SECTION ABOUT SALON -->
+  <section>
+    <div class="m-5 lg:m-10 xl:m-15 2xl:m-20">
+
+      <!--FIRST ROW-->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center">
+        <div
+          class="text-6xl md:text-7xl 2xl:text-8xl text-black font-extrabold text-center 3xl:text-right md:pr-20 3xl:pr-0 py-2">
+          10</div>
+        <div class="text-3xl 2xl:text-4xl text-gray-400 font-medium uppercase text-left lg:text-center py-2">rokov
+          starostlivosti</div>
+        <div class="text-3xl 2xl:text-4xl text-gray-600 font-bold uppercase text-right 3xl:text-left py-2">o psiu krásu
+        </div>
+      </div>
+
+      <!--SECOND ROW-->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center lg:pt-10 2xl:pt-20">
+        <div
+          class="text-2xl md:text-3xl 2xl:text-4xl text-black font-extralight uppercase text-left 3xl:text-center py-2">
+          profesionálne strihanie</div>
+        <div class="text-6xl 2xl:text-7xl text-pink-500 font-extrabold uppercase py-2 text-center">láska</div>
+        <div
+          class="text-3xl 2xl:text-4xl text-gray-600 font-extralight uppercase text-center sm:text-right 3xl:text-center py-2">
+          individuálny prístup</div>
+      </div>
+
+      <!--THRID ROW-->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center lg:pt-10 2xl:pt-20">
+        <div
+          class="text-4xl 2xl:text-5xl text-black font-extrabold uppercase text-center sm:text-left 3xl:text-center py-2">
+          majiteľ</div>
+        <div class="text-3xl 2xl:text-4xl text-gray-400 font-extralight uppercase text-right sm:text-center py-2">môže
+          byť pri svojom psíkovi</div>
+        <div
+          class="text-3xl 2xl:text-4xl text-gray-600 font-bold uppercase text-center sm:text-right 3xl:text-center py-2">
+          počas úpravy</div>
+      </div>
+
+      <!--TEXT-->
+      <div class="text-center my-8 lg:my-10 2xl:my-20 3xl:my-25 text-lg sm:text-xl 2xl:text-2xl 3xl:text-3xl">
+        <p>Sledujte kúpanie, strihanie, sušenie aj finálne úpravy úplne naživo.</p>
+        <p class="font-bold text-pink-500 py-2">BEZ STRESU. BEZ OBÁV.</p>
+        <p>Vaša prítomnosť prináša pokoj – a pokoj znamená spokojného psa.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!--SERVICES SECTION-->
+  <section id="sluzby" class="min-h-[450vh] pt-10 bg-black">
+  <div class="w-full lg:max-w-7xl xl:max-w-9xl lg:mx-auto xl:mx-auto">
+    
+    <div class="text-center mb-10">
+      <h1 class="uppercase text-6xl md:text-7xl lg:text-8xl font-black bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+        Naše služby
+      </h1>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid lg:grid-cols-2 items-start lg:p-10">
+      
+      <!-- STICKY IMAGE -->
+      <div class="sticky min-h-screen inset-0 lg:top-35 xl:top-20 2xl:top-50">
+        <img src="./images/services/alektas-grooming-6894992_1920.jpg" alt="Grooming" 
+             class="w-full h-full md:h-[60vh] lg:h-[70vh] xl:h-[80vh] 2xl:h-[60vh] lg:rounded-2xl object-cover shadow-2xl">
+      </div>
+
+      <!-- SERVICES -->
+      <div class="p-4 lg:ml-4 2xl:ml-32">
+        <!-- 1. STRIHANIE -->
+        <div class="flex min-h-[80vh] justify-center items-center">
+          <div class="w-full text-center">
+            <h2 class="text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-linear-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent mb-4">Strihanie</h2>
+            <p class="mx-auto max-w-xl text-xl md:text-2xl lg:text-3xl text-gray-200 font-light">
+              Profesionálne strihanie podľa štandardov plemena aj moderné trendy strihy
+            </p>
+          </div>
+        </div>
+
+         <!-- 2. KUPANIE -->
+        <div class="flex min-h-[80vh] justify-center items-center">
+          <div class="w-full text-center">
+            <h2 class="text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-linear-to-r from-yellow-400 via-red-500 to-orange-400 bg-clip-text text-transparent mb-4">Kúpanie</h2>
+            <p class="mx-auto max-w-xl text-xl md:text-2xl lg:text-3xl text-gray-200 font-light">
+              Profesionálne kúpanie s využitím kvalitných prostriedkov pre každý typ psa
+          </div>
+        </div>
+
+         <!-- 3. VYČESÁVANIE -->
+        <div class="flex min-h-[80vh] justify-center items-center">
+          <div class="w-full text-center">
+            <h2 class="text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-linear-to-r from-green-400 via-white to-yellow-300 bg-clip-text text-transparent mb-4">Vyčesávanie</h2>
+            <p class="mx-auto max-w-xl text-xl md:text-2xl lg:text-3xl text-gray-200 font-light">
+              Profesionálne vyčesávanie všetkých typov psích srstí
+            </p>
+          </div>
+        </div>
+
+         <!-- 4. DROBNÉ ÚPRAVY -->
+        <div class="flex min-h-[80vh] justify-center items-center">
+          <div class="w-full text-center">
+            <h2 class="text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-linear-to-r from-blue-400 via-pink-300 to-teal-300 bg-clip-text text-transparent mb-4">Drobné úpravy</h2>
+            <p class="mx-auto max-w-xl text-xl md:text-2xl lg:text-3xl text-gray-200 font-light">
+              Prípadné úpravy výrazne zlepšia vzhľad a pohyb psa
+            </p>
+          </div>
+        </div>
+
+         <!-- 5. DOPLNKOVÉ -->
+        <div class="flex min-h-[80vh] justify-center items-center">
+          <div class="w-full text-center">
+            <h2 class="text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-linear-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent mb-4">Doplnkové služby</h2>
+            <p class="mx-auto max-w-xl text-xl md:text-2xl lg:text-3xl text-gray-200 font-light">
+              Ošetrenie uší, úprava pazúrikov, čistenie zubov a ďalšie doplnkové služby
+            </p>
+          </div>
+        </div> 
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!--PRICES PAWS-->
+  <section id="cennik" class="min-h-screen">
+    <h1
+      class="uppercase mt-10 bg-linear-to-r from-blue-500 to-pink-500 text-5xl sm:text-6xl md:text-7xl 3xl:text-8xl bg-clip-text text-transparent font-extrabold text-center">
+      cenník</h1>
+    <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 p-10 lg:mt-10">
+      <!--FIRST PAW-->
+      <div class="flex flex-col items-center gap-4 p-8 md:col-span-2 lg:col-span-1 overflow-hidden ">
+        <img src="./images/paws/paw_s.png" class="max-w-[50%] sm:max-w-[60%] md:max-w-[80%] h-auto object-contain">
+        <p class="text-center text-lg sm:text-2xl xl:text-3xl">Yorkšírky teriér, Maltézsky psík..</p>
+      </div>
+      <!--SECOND PAW-->
+      <div class="flex flex-col items-center gap-4 p-8 md:col-span-2 lg:col-span-1 overflow-hidden">
+        <img src="./images/paws/paw_m.png" class="max-w-[50%] sm:max-w-[60%] md:max-w-[80%] h-auto object-contain">
+        <p class="text-center text-lg sm:text-2xl xl:text-3xl">Anglický kokeršpaniel, Stredný pudel..</p>
+      </div>
+      <!--THIRD PAW-->
+      <div class="flex flex-col items-center gap-4 p-8 md:col-span-2 lg:col-span-1 overflow-hidden ">
+        <img src="./images/paws/paw_l.png" class="max-w-[50%] sm:max-w-[60%] md:max-w-[80%] h-auto object-contain">
+        <p class="text-center text-lg sm:text-2xl xl:text-3xl">Erdel teriér...</p>
+      </div>
+
+      <!--FOURTH PAW-->
+      <div class="flex flex-col items-center gap-4 p-8 md:col-span-2 md:col-start-2 lg:col-span-1">
+        <img src="./images/paws/paw_xl.png" class="max-w-[50%] sm:max-w-[60%] md:max-w-[80%] h-auto object-contain">
+        <p class="text-center text-lg sm:text-2xl xl:text-3xl">Zlatý retvíver, Labrador..</p>
+      </div>
+      <!--FIFTH PAW-->
+      <div class="flex flex-col items-center gap-4 p-8 md:col-span-2 lg:col-span-1">
+        <img src="./images/paws/paw_xxl.png" class="max-w-[50%] sm:max-w-[60%] md:max-w-[80%] h-auto object-contain">
+        <p class="text-center text-lg sm:text-2xl xl:text-3xl">
+          Kráľovský pudel, Bobtail..
+        </p>
+      </div>
+  </section>
+
+  <!--PRICES LIST-->
+  <section class="services-bg relative p-10">
+    <!--FIRST ROW-->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+      <!--FIRST LIST-->
+      <div
+        class=" max-w-xl z-50 relative mx-auto bg-linear-to-r from bg-pink-500 via-purple-500 to-blue-400 rounded-3xl p-0.5">
+        <div class="max-w-xl mx-auto bg-white rounded-3xl p-8">
+          <h3 class="text-center text-2xl sm:text-3xl uppercase mb-8 font-extrabold"><i
+              class="fa-solid fa-scissors text-blue-500 mr-3"></i>Strihanie</h3>
+          <div class="text-black space-y-5">
+
+            <div class="flex justify-between items-center py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl">S psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl ">M psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl">L psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl">XL psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-between items-center mb-8 py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl">XXL psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-center items-center">
+              <button
+                class="flex bg-linear-to-r from-blue-400 via-purple-400 to-pink-500 uppercase p-2 sm:p-4 rounded-2xl justify-center items-center font-bold text-white text-xl sm:text-2xl">
+                <i class="fa-regular fa-calendar-check text-xl sm:text-2xl sm:mr-2"></i>
+                objednať termín
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!--SECOND LIST-->
+      <div
+        class=" max-w-xl z-50 relative mx-auto bg-linear-to-r from bg-pink-500 via-purple-500 to-blue-400 rounded-3xl p-0.5">
+        <div class="max-w-xl mx-auto bg-white rounded-3xl p-8">
+          <h3 class="text-center text-2xl sm:text-3xl uppercase mb-8 font-extrabold"><i
+              class="fa-solid fa-scissors text-blue-500 mr-3"></i>Strihanie</h3>
+          <div class="text-black space-y-5">
+
+            <div class="flex justify-between items-center py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl">S psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl ">M psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl">L psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl">XL psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-between items-center mb-8 py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl">XXL psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-center items-center">
+              <button
+                class="flex bg-linear-to-r from-blue-400 via-purple-400 to-pink-500 uppercase p-2 sm:p-4 rounded-2xl justify-center items-center font-bold text-white text-xl sm:text-2xl">
+                <i class="fa-regular fa-calendar-check text-xl sm:text-2xl sm:mr-2"></i>
+                objednať termín
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!--THIRD LIST-->
+      <div
+        class=" max-w-xl z-50 relative mx-auto bg-linear-to-r from bg-pink-500 via-purple-500 to-blue-400 rounded-3xl p-0.5">
+        <div class="max-w-xl mx-auto bg-white rounded-3xl p-8">
+          <h3 class="text-center text-2xl sm:text-3xl uppercase mb-8 font-extrabold"><i
+              class="fa-solid fa-scissors text-blue-500 mr-3"></i>Strihanie</h3>
+          <div class="text-black space-y-5">
+
+            <div class="flex justify-between items-center py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl">S psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl ">M psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl">L psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl">XL psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-between items-center mb-8 py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl">XXL psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-center items-center">
+              <button
+                class="flex bg-linear-to-r from-blue-400 via-purple-400 to-pink-500 uppercase p-2 sm:p-4 rounded-2xl justify-center items-center font-bold text-white text-xl sm:text-2xl">
+                <i class="fa-regular fa-calendar-check text-xl sm:text-2xl sm:mr-2"></i>
+                objednať termín
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div> <!--END OF THIRD LIST-->
+    </div> <!--END OF FIRST GRID ROW-->
+
+    <!--SECOND ROW-->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10">
+      <!--FIRST LIST-->
+      <div
+        class=" max-w-xl z-50 relative mx-auto bg-linear-to-r from bg-pink-500 via-purple-500 to-blue-400 rounded-3xl p-0.5">
+        <div class="max-w-xl mx-auto bg-white rounded-3xl p-8">
+          <h3 class="text-center text-2xl sm:text-3xl uppercase mb-8 font-extrabold"><i
+              class="fa-solid fa-scissors text-blue-500 mr-3"></i>Strihanie</h3>
+          <div class="text-black space-y-5">
+
+            <div class="flex justify-between items-center py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl">S psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl ">M psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl">L psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl">XL psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-between items-center mb-8 py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl">XXL psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-center items-center">
+              <button
+                class="flex bg-linear-to-r from-blue-400 via-purple-400 to-pink-500 uppercase p-2 sm:p-4 rounded-2xl justify-center items-center font-bold text-white text-xl sm:text-2xl">
+                <i class="fa-regular fa-calendar-check text-xl sm:text-2xl sm:mr-2"></i>
+                objednať termín
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!--SECOND LIST-->
+      <div
+        class=" max-w-xl z-50 relative mx-auto bg-linear-to-r from bg-pink-500 via-purple-500 to-blue-400 rounded-3xl p-0.5">
+        <div class="max-w-xl mx-auto bg-white rounded-3xl p-8">
+          <h3 class="text-center text-2xl sm:text-3xl uppercase mb-8 font-extrabold"><i
+              class="fa-solid fa-scissors text-blue-500 mr-3"></i>Strihanie</h3>
+          <div class="text-black space-y-5">
+
+            <div class="flex justify-between items-center py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl">S psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl ">M psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl">L psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-between items-center py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl">XL psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-between items-center mb-8 py-1 border-b border-gray-300">
+              <span class="text-xl sm:text-2xl">XXL psík</span>
+              <span class="text-xl font-bold sm:text-2xl">26€</span>
+            </div>
+
+            <div class="flex justify-center items-center">
+              <button
+                class="flex bg-linear-to-r from-blue-400 via-purple-400 to-pink-500 uppercase p-2 sm:p-4 rounded-2xl justify-center items-center font-bold text-white text-xl sm:text-2xl">
+                <i class="fa-regular fa-calendar-check text-xl sm:text-2xl sm:mr-2"></i>
+                objednať termín
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div> <!--END OF SECOND GRID ROW-->
+
+    <div class="absolute inset-0 z-0 bg-black/50"></div>
+  </section>
+
+
+<section id="cennik" class="relative py-24 bg-black overflow-hidden text-white">
+
+  <!-- RADIO -->
+  <input type="radio" name="size" id="close" class="hidden" checked>
+  <input type="radio" name="size" id="s" class="hidden">
+  <input type="radio" name="size" id="m" class="hidden">
+  <input type="radio" name="size" id="l" class="hidden">
+  <input type="radio" name="size" id="xl" class="hidden">
+  <input type="radio" name="size" id="xxl" class="hidden">
+
+  <h1 class="text-6xl font-black text-center mb-20 
+  bg-gradient-to-r from-blue-400 via-pink-400 to-purple-500 
+  bg-clip-text text-transparent">
+    Cenník
+  </h1>
+
+  <!-- LABKY -->
+  <div class="flex flex-wrap justify-center gap-12">
+
+    <label for="s" class="paw"> <img src="./images/paws/paw_s.png"><p>S</p></label>
+    <label for="m" class="paw"> <img src="./images/paws/paw_m.png"><p>M</p></label>
+    <label for="l" class="paw"> <img src="./images/paws/paw_l.png"><p>L</p></label>
+    <label for="xl" class="paw"> <img src="./images/paws/paw_xl.png"><p>XL</p></label>
+    <label for="xxl" class="paw"> <img src="./images/paws/paw_xxl.png"><p>XXL</p></label>
+
+  </div>
+
+  <!-- OVERLAY -->
+  <div class="overlay">
+
+    <div class="panel">
+
+      <label for="close" class="close-btn">×</label>
+
+      <!-- S -->
+      <div class="content content-s">
+        <h3 class="title">S – Malé plemená</h3>
+        <div class="price-list">
+          <p>Strihanie <b>26€</b></p>
+          <p>Kúpanie <b>15€</b></p>
+          <p>Vyčesávanie <b>10€</b></p>
+        </div>
+      </div>
+
+      <!-- M -->
+      <div class="content content-m">
+        <h3 class="title">M – Stredné plemená</h3>
+        <div class="price-list">
+          <p>Strihanie <b>35€</b></p>
+          <p>Kúpanie <b>20€</b></p>
+          <p>Vyčesávanie <b>15€</b></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+</body>
+
+</html>
