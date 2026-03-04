@@ -1,150 +1,181 @@
-<section id="cennik" class="relative py-24 bg-black overflow-hidden">
-
+<section id="cennik" class="relative overflow-hidden bg-black py-24">
   <!-- Jemné rozostreté farebné flaky -->
-  <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500/30 blur-[120px] rounded-full"></div>
-  <div class="absolute bottom-10 right-10 w-72 h-72 bg-pink-500/30 blur-[120px] rounded-full"></div>
+  <div
+    class="absolute top-20 left-10 h-72 w-72 rounded-full bg-blue-500/30 blur-[120px]"
+  ></div>
+  <div
+    class="absolute right-10 bottom-10 h-72 w-72 rounded-full bg-pink-500/30 blur-[120px]"
+  ></div>
 
-  <h1 class="uppercase text-6xl font-black text-center mb-20 
-  bg-linear-to-r from-blue-400 via-pink-400 to-purple-500 
-  bg-clip-text text-transparent relative z-10">
+  <h1
+    class="relative z-10 mb-20 bg-linear-to-r from-blue-400 via-pink-400 to-purple-500 bg-clip-text text-center text-6xl font-black text-transparent uppercase"
+  >
     Cenník
   </h1>
 
   <!-- PAWS -->
-  <div class="flex flex-wrap justify-center gap-12 relative z-10">
-
+  <div class="relative z-10 flex flex-wrap justify-center gap-12">
     <button data-size="s" class="paw-btn">
-      <img src="./images/paws/paw_s.png" class="paw-img">
+      <img src="./images/paws/paw_s.png" class="paw-img" />
       <p>S</p>
     </button>
 
     <button data-size="m" class="paw-btn">
-      <img src="./images/paws/paw_m.png" class="paw-img">
+      <img src="./images/paws/paw_m.png" class="paw-img" />
       <p>M</p>
     </button>
 
     <button data-size="l" class="paw-btn">
-      <img src="./images/paws/paw_l.png" class="paw-img">
+      <img src="./images/paws/paw_l.png" class="paw-img" />
       <p>L</p>
     </button>
 
     <button data-size="xl" class="paw-btn">
-      <img src="./images/paws/paw_xl.png" class="paw-img">
+      <img src="./images/paws/paw_xl.png" class="paw-img" />
       <p>XL</p>
     </button>
 
     <button data-size="xxl" class="paw-btn">
-      <img src="./images/paws/paw_xxl.png" class="paw-img">
+      <img src="./images/paws/paw_xxl.png" class="paw-img" />
       <p>XXL</p>
     </button>
-
   </div>
 
-
   <!-- FLOATING PANEL -->
-  <div id="price-overlay"
-       class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-50 transition-opacity duration-500">
-
-    <div id="price-panel"
-         class="bg-gradient-to-br from-pink-500 via-purple-500 to-blue-500 
-         rounded-3xl p-1 shadow-[0_0_80px_rgba(255,0,255,0.4)]
-         transform scale-75 opacity-0 transition-all duration-500 max-w-2xl w-[90%]">
-
-      <div class="bg-black rounded-3xl p-10 text-white relative">
-
-        <button id="close-panel"
-          class="absolute top-4 right-6 text-3xl font-bold hover:text-pink-400 transition">
+  <div
+    id="price-overlay"
+    class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 backdrop-blur-sm transition-opacity duration-500"
+  >
+    <div
+      id="price-panel"
+      class="w-[90%] max-w-2xl scale-75 transform rounded-3xl bg-gradient-to-br from-pink-500 via-purple-500 to-blue-500 p-1 opacity-0 shadow-[0_0_80px_rgba(255,0,255,0.4)] transition-all duration-500"
+    >
+      <div class="relative rounded-3xl bg-black p-10 text-white">
+        <button
+          id="close-panel"
+          class="absolute top-4 right-6 text-3xl font-bold transition hover:text-pink-400"
+        >
           ×
         </button>
 
-        <h3 id="panel-title"
-          class="text-4xl font-extrabold uppercase text-center mb-10 
-          bg-linear-to-r from-blue-400 to-pink-400 
-          bg-clip-text text-transparent">
-        </h3>
+        <h3
+          id="panel-title"
+          class="mb-10 bg-linear-to-r from-blue-400 to-pink-400 bg-clip-text text-center text-4xl font-extrabold text-transparent uppercase"
+        ></h3>
 
         <div id="panel-content" class="space-y-4 text-xl"></div>
-
       </div>
     </div>
   </div>
-
 </section>
 <script>
-const prices = {
-  s: { title: "S – Malé plemená", items: ["Strihanie – 26€","Kúpanie – 15€","Vyčesávanie – 10€","Drobné úpravy – 8€","Doplnkové služby – od 5€"] },
-  m: { title: "M – Stredné plemená", items: ["Strihanie – 35€","Kúpanie – 20€","Vyčesávanie – 15€","Drobné úpravy – 10€","Doplnkové služby – od 6€"] },
-  l: { title: "L – Väčšie plemená", items: ["Strihanie – 45€","Kúpanie – 25€","Vyčesávanie – 20€","Drobné úpravy – 15€","Doplnkové služby – od 8€"] },
-  xl:{ title: "XL – Veľké plemená", items: ["Strihanie – 55€","Kúpanie – 30€","Vyčesávanie – 25€","Drobné úpravy – 18€","Doplnkové služby – od 10€"] },
-  xxl:{ title: "XXL – Obrie plemená", items: ["Strihanie – 65€","Kúpanie – 35€","Vyčesávanie – 30€","Drobné úpravy – 20€","Doplnkové služby – od 12€"] }
-};
+  const prices = {
+    s: {
+      title: "S – Malé plemená",
+      items: [
+        "Strihanie – 26€",
+        "Kúpanie – 15€",
+        "Vyčesávanie – 10€",
+        "Drobné úpravy – 8€",
+        "Doplnkové služby – od 5€",
+      ],
+    },
+    m: {
+      title: "M – Stredné plemená",
+      items: [
+        "Strihanie – 35€",
+        "Kúpanie – 20€",
+        "Vyčesávanie – 15€",
+        "Drobné úpravy – 10€",
+        "Doplnkové služby – od 6€",
+      ],
+    },
+    l: {
+      title: "L – Väčšie plemená",
+      items: [
+        "Strihanie – 45€",
+        "Kúpanie – 25€",
+        "Vyčesávanie – 20€",
+        "Drobné úpravy – 15€",
+        "Doplnkové služby – od 8€",
+      ],
+    },
+    xl: {
+      title: "XL – Veľké plemená",
+      items: [
+        "Strihanie – 55€",
+        "Kúpanie – 30€",
+        "Vyčesávanie – 25€",
+        "Drobné úpravy – 18€",
+        "Doplnkové služby – od 10€",
+      ],
+    },
+    xxl: {
+      title: "XXL – Obrie plemená",
+      items: [
+        "Strihanie – 65€",
+        "Kúpanie – 35€",
+        "Vyčesávanie – 30€",
+        "Drobné úpravy – 20€",
+        "Doplnkové služby – od 12€",
+      ],
+    },
+  };
 
-const buttons = document.querySelectorAll(".paw-btn");
-const overlay = document.getElementById("price-overlay");
-const panel = document.getElementById("price-panel");
-const title = document.getElementById("panel-title");
-const content = document.getElementById("panel-content");
-const closeBtn = document.getElementById("close-panel");
+  const buttons = document.querySelectorAll(".paw-btn");
+  const overlay = document.getElementById("price-overlay");
+  const panel = document.getElementById("price-panel");
+  const title = document.getElementById("panel-title");
+  const content = document.getElementById("panel-content");
+  const closeBtn = document.getElementById("close-panel");
 
-buttons.forEach(btn => {
-  btn.addEventListener("click", () => {
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      buttons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
 
-    buttons.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
+      const size = btn.dataset.size;
 
-    const size = btn.dataset.size;
+      title.textContent = prices[size].title;
 
-    title.textContent = prices[size].title;
-
-    content.innerHTML = prices[size].items
-      .map(item => `<div class="flex justify-between border-b border-white/20 pb-2">
+      content.innerHTML = prices[size].items
+        .map(
+          (
+            item,
+          ) => `<div class="flex justify-between border-b border-white/20 pb-2">
                       <span>${item.split("–")[0]}</span>
                       <span class="font-bold">${item.split("–")[1]}</span>
-                    </div>`)
-      .join("");
+                    </div>`,
+        )
+        .join("");
 
-    overlay.classList.remove("hidden");
+      overlay.classList.remove("hidden");
 
-    setTimeout(() => {
-      overlay.classList.add("flex");
-      panel.classList.remove("scale-75","opacity-0");
-      panel.classList.add("scale-100","opacity-100");
-    }, 10);
+      setTimeout(() => {
+        overlay.classList.add("flex");
+        panel.classList.remove("scale-75", "opacity-0");
+        panel.classList.add("scale-100", "opacity-100");
+      }, 10);
+    });
   });
-});
 
-closeBtn.addEventListener("click", () => {
-  panel.classList.add("scale-75","opacity-0");
-  setTimeout(() => {
-    overlay.classList.add("hidden");
-    overlay.classList.remove("flex");
-  }, 400);
-});
+  closeBtn.addEventListener("click", () => {
+    panel.classList.add("scale-75", "opacity-0");
+    setTimeout(() => {
+      overlay.classList.add("hidden");
+      overlay.classList.remove("flex");
+    }, 400);
+  });
 
-overlay.addEventListener("click", e => {
-  if(e.target === overlay){
-    closeBtn.click();
-  }
-});
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      closeBtn.click();
+    }
+  });
 </script>
 
-
-
-
-
-  .paw-btn {
-  @apply text-white text-xl font-bold text-center transition duration-300;
-}
-
-.paw-img {
-  @apply w-28 mx-auto transition duration-300;
-}
-
-.paw-btn:hover .paw-img {
-  transform: scale(1.15) rotate(6deg);
-}
-
-.paw-btn.active .paw-img {
-  filter: drop-shadow(0 0 25px rgba(255,0,255,0.8));
-  transform: scale(1.2);
-}
+.paw-btn { @apply text-white text-xl font-bold text-center transition
+duration-300; } .paw-img { @apply w-28 mx-auto transition duration-300; }
+.paw-btn:hover .paw-img { transform: scale(1.15) rotate(6deg); } .paw-btn.active
+.paw-img { filter: drop-shadow(0 0 25px rgba(255,0,255,0.8)); transform:
+scale(1.2); }

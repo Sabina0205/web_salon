@@ -15,13 +15,11 @@
   <link rel="icon" href="./images/favicon_io_white/favicon.ico" media="(prefers-color-scheme: dark)">
 </head>
 
-
-
-<body class=" bg-slate-50">
+<body class="bg-slate-50">
   <!-- HERO SEKCIA -->
   <section id="domov" class="hero-bg relative flex min-h-screen flex-col sm:pt-4">
     <!-- NAVBAR -->
-    <header class="sticky top-0 z-50 flex w-full items-center justify-between bg-transparent px-4 py-3 ">
+    <header class="absolute top-0 z-50 flex w-full items-center justify-between  px-4 py-3 bg-transparent">
       <!-- LOGO -->
       <a href="#" class="z-50">
         <img src="./images/logo_white_2480x1594.png" alt="TRENDY DOG"
@@ -201,7 +199,7 @@
 
   <!--SERVICES SECTION-->
   <section id="sluzby" class="min-h-[400vh] pt-10 bg-black">
-    <div class="w-full lg:max-w-7xl xl:max-w-9xl lg:mx-auto xl:mx-auto">
+    <div class="w-full lg:max-w-7xl xl:max-w-9xl 2xl:max-w-none lg:mx-auto xl:mx-0">
 
       <div class="text-center mb-10">
         <h1
@@ -220,7 +218,7 @@
         </div>
 
         <!-- SERVICES -->
-        <div class="p-4 lg:ml-4 2xl:ml-32">
+        <div class="p-4 lg:ml-4 xl:ml-10 2xl:ml-32">
           <!-- 1. STRIHANIE -->
           <div class="flex min-h-[80vh] justify-center items-center">
             <div class="w-full text-center">
@@ -284,8 +282,11 @@
 
       </div>
     </div>
-  </section>
 
+</div>
+
+
+  </section>
 
   <!-- PRICE SECTION -->
   <section id="cennik"
@@ -474,13 +475,18 @@
 
       </div>
     </div>
+
+    <!-- DIVIDER-->
+    <svg class="absolute bottom-0 left-0 w-full h-30" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,40 C200,90 400,10 600,50 C800,90 1000,20 1200,60 L1200,120 L0,120 Z" fill="#f8fafc"></path>
+    </svg>
   </section>
 
   <!-- GALLERY -->
-  <section id="galeria" class="pb-15">
+  <section id="galeria">
 
     <h1
-      class="uppercase text-center py-20 text-6xl md:text-7xl lg:text-8xl font-black bg-linear-to-r from-blue-400  to-pink-500 bg-clip-text text-transparent">
+      class="uppercase text-center mt-12 md:mt-20 text-6xl md:text-7xl lg:text-8xl font-black bg-linear-to-r from-blue-400  to-pink-500 bg-clip-text text-transparent">
       galéria
     </h1>
 
@@ -613,6 +619,159 @@
       </div>
     </div>
 
+  </section>
+
+  <!-- CONTACT -->
+  <section id="kontakt" class="relative">
+    <div class="w-full lg:max-w-7xl xl:max-w-9xl lg:mx-auto xl:mx-auto px-10">
+
+      <div class="text-center mb-10">
+        <h1
+          class="uppercase text-6xl md:text-7xl lg:text-8xl font-black bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          kontakt
+        </h1>
+        <p class="mt-10 mx-auto max-w-3xl lg:max-w-4xl text-xl md:text-2xl lg:text-3xl font-light">Kontaktujte nás
+          telefonicky alebo prostredníctvom messengera cez týždeň medzi 9:00 až 17:00. Termín je potrebné si dopredu
+          dohodnúť. Tešíme sa na Vašu návštevu!</p>
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 max-w-6xl lg:max-w-4xl mx-auto place-items-center gap-6 items-stretch">
+        <div
+          class="max-h-64 lg:max-h-80 w-full max-w-sm border border-gray-200 shadow-md flex flex-col items-center p-4 lg:p-8 rounded-xl text-center gap-y-2">
+          <a href="tel:+421905123456">
+            <i class="fa-solid fa-phone text-3xl lg:text-5xl pb-2"></i>
+            <h4 class="text-2xl lg:text-3xl text-pink-500 font-bold">Telefón</h4>
+            <p class="text-xl lg:text-2xl">+421 908 030 410</p>
+          </a>
+        </div>
+
+        <div
+          class="max-h-64 lg:max-h-80 w-full max-w-sm border border-gray-200 shadow-md flex flex-col items-center p-4 lg:p-8 rounded-xl text-center gap-y-2">
+          <i class="fa-solid fa-map-marker-alt text-3xl lg:text-5xl pb-2"></i>
+          <h4 class="text-2xl lg:text-3xl text-pink-500 font-bold">Adresa</h4>
+          <p class="text-xl lg:text-2xl">Dukelská štvrť 1402, 018 41 Dubnica nad Váhom</p>
+        </div>
+
+        <div
+          class="max-h-64 lg:max-h-80 w-full max-w-sm border border-gray-200 shadow-md flex flex-col items-center p-4 lg:p-8 rounded-xl text-center gap-y-2">
+          <i class="fa-solid fa-clock text-3xl lg:text-5xl pb-2"></i>
+          <h4 class="text-2xl lg:text-3xl text-pink-500 font-bold">Otváracia doba</h4>
+          <p class="text-xl lg:text-2xl">PO - PIA:<br> na objednávku</p>
+        </div>
+
+      </div>
+
+      <div class="flex justify-center mt-10 gap-6">
+        <!-- MESSENGER -->
+        <div class="z-10 rounded-full bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 p-2 text-white sm:p-4">
+          <a href="https://m.me/100043366519536" target="_blank">
+            <div class="flex items-center justify-center">
+              <svg class="h-10 w-10 sm:h-12 sm:w-12 xl:h-15 xl:w-15 2xl:h-20 2xl:w-20" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+              </svg>
+            </div>
+          </a>
+        </div>
+        <!-- FACEBOOK -->
+        <div class="z-10 rounded-full bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 p-2 text-white sm:p-4">
+          <a href="https://www.facebook.com/people/Trendy-dog-ps%C3%AD-sal%C3%B3n/100043366519536/" target="_blank">
+            <div class="flex items-center justify-center">
+              <svg class="h-10 w-10 sm:h-12 sm:w-12 xl:h-15 xl:w-15 2xl:h-20 2xl:w-20" fill="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- MAP -->
+    <div class="relative w-full h-96 mt-10">
+      <iframe class="absolute w-full h-full"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2619.0865415303774!2d18.18628767651132!3d48.97087699278365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471499ed4bfbdb5d%3A0x1ce4a1d16f839c3b!2zRHVrZWxza8OhIMWgdHZyxaUgMTQwMiwgMDE4IDQxIER1Ym5pY2EgbmFkIFbDoWhvbQ!5e0!3m2!1ssk!2ssk!4v1772649716192!5m2!1ssk!2ssk"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-bg relative py-8">
+
+    <div class="absolute inset-0 z-10 bg-black/70"></div>
+
+    <div class="relative w-full z-20 lg:max-w-7xl xl:max-w-9xl 2xl:max-w-none lg:mx-auto xl:mx-auto">
+
+      <div class="flex flex-col gap-8 px-4 md:px-6 xl:px-15 lg:flex-row  lg:justify-between mb-10">
+
+        <!-- LOGO + ADDRESS -->
+        <div class="z-50 flex flex-col items-center justify-center lg:text-left">
+          <a href="#">
+            <img src="./images/logo_white_2480x1594.png" alt="TRENDY DOG" class="h-25 max-w-full sm:h-28 xl:h-32" />
+          </a>
+          <p class="mt-3 max-w-xs text-center text-white sm:text-lg">Dukelská štvrť 1402,<br> 018 41 Dubnica nad Váhom
+          </p>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="z-50 lg:self-center">
+          <ul
+            class="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 font-medium text-white sm:text-md lg:text-lg xl:text-xl">
+            <li><a href="#domov" class="rounded-lg hover:underline hover:underline-offset-8">DOMOV</a></li>
+            <li><a href="#sluzby" class="rounded-lg hover:underline hover:underline-offset-8">SLUŽBY</a></li>
+            <li><a href="#cennik" class="rounded-lg hover:underline hover:underline-offset-8">CENNÍK</a></li>
+            <li><a href="#galeria" class="rounded-lg hover:underline hover:underline-offset-8">GALÉRIA</a></li>
+            <li><a href="#kontakt" class="rounded-lg hover:underline hover:underline-offset-8">KONTAKT</a></li>
+          </ul>
+        </nav>
+
+        <!-- CONTACT ICONS -->
+        <div class="z-50 flex items-center justify-center gap-4">
+          <a href="tel:+421908030410"
+            class="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 border border-white/30 text-white transition hover:bg-pink-600"
+            aria-label="Telefon">
+            <i class="fa-solid fa-phone text-xl"></i>
+          </a>
+          <a href="https://m.me/100043366519536" target="_blank" rel="noopener noreferrer"
+            class="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 border border-white/30 text-white transition hover:bg-pink-600"
+            aria-label="Messenger">
+            <i class="fa-brands fa-facebook-messenger text-xl"></i>
+          </a>
+          <a href="https://www.facebook.com/people/Trendy-dog-ps%C3%AD-sal%C3%B3n/100043366519536/" target="_blank"
+            rel="noopener noreferrer"
+            class="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 border border-white/30 text-white transition hover:bg-pink-600"
+            aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f text-xl"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-10 border-t border-pink-500/70 pt-6 mx-10">
+        <p class="text-center text-white/80 text-xs sm:text-sm xl:text-lg">
+          &copy;
+          <script>document.write(new Date().getFullYear())</script> TRENDY DOG psí salón. Všetky práva vyhradené.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <section class="relative bg-black text-white py-24">
+    <h2 class="text-5xl font-black">Sekcia 1</h2>
+
+    <!-- divider dole -->
+    <svg class="absolute bottom-0 left-0 w-full h-30" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,40 C200,90 400,10 600,50 C800,90 1000,20 1200,60 L1200,120 L0,120 Z" fill="#ffffff"></path>
+    </svg>
+  </section>
+
+  <section class="bg-white py-24">
+    <h2 class="text-5xl font-black">Sekcia 2</h2>
   </section>
 
 </body>
