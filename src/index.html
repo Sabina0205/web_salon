@@ -78,9 +78,16 @@
     <script>
       const toggleBtn = document.querySelector(".toggle-button");
       const dropdown = document.querySelector(".dropdown-menu");
+      const dropdownLinks = document.querySelectorAll(".dropdown-menu a");
 
       toggleBtn.addEventListener("click", () => {
         dropdown.classList.toggle("hidden");
+      });
+
+      dropdownLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          dropdown.classList.add("hidden");
+        });
       });
     </script>
 
@@ -88,7 +95,7 @@
     <div class="flex-1"></div>
 
     <!-- HERO text -->
-    <article class="flex items-start px-4 pb-10 sm:w-[70%] md:p-10 lg:px-10 2xl:px-15">
+    <article class="flex items-center px-4 mb-25 sm:w-[70%] md:p-10 lg:px-10 2xl:px-15">
       <div class="flex flex-col justify-end">
         <h1 class="z-10 text-5xl font-extrabold text-white sm:text-7xl xl:text-8xl">
           TRENDY DOG
@@ -146,10 +153,15 @@
       </div>
     </article>
     <div class="absolute inset-0 z-0 bg-black/50"></div>
+    <!-- DIVIDER-->
+    <svg class="absolute bottom-0 left-0 w-full h-20 md:h-30" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,40 C200,90 400,10 600,50 C800,90 1000,20 1200,60 L1200,120 L0,120 Z" fill="#f8fafc"></path>
+    </svg>
+
   </section>
 
   <!-- SECTION ABOUT SALON -->
-  <section>
+  <section class="relative">
     <div class="m-5 lg:m-10 xl:m-15 2xl:m-20">
 
       <!--FIRST ROW-->
@@ -194,103 +206,170 @@
       </div>
 
     </div>
+
   </section>
 
 
   <!--SERVICES SECTION-->
-  <section id="sluzby" class="min-h-[400vh] pt-10 bg-black">
-    <div class="w-full lg:max-w-7xl xl:max-w-9xl 2xl:max-w-none lg:mx-auto xl:mx-0">
+  <section id="sluzby" class="min-h-[400vh]">
 
-      <div class="text-center mb-10">
-        <h1
-          class="uppercase text-6xl md:text-7xl lg:text-8xl font-black bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-          Naše služby
-        </h1>
+    <!-- SERVICES -->
+    <div class="relative bg-black">
+
+      <!-- CIRCLES BG -->
+      <svg class="absolute inset-0 w-full h-full overflow-visible" preserveAspectRatio="none">
+        <defs>
+          <!-- FILTER-->
+          <filter id="blurMe" x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="90" />
+          </filter>
+        </defs>
+
+        <!-- CIRCLES -->
+        <circle cx="15%" cy="25%" r="250" fill="rgba(255,182,193,0.3)" filter="url(#blurMe)" /> <!-- pastel ružová -->
+        <circle cx="70%" cy="60%" r="200" fill="rgba(173,216,230,0.3)" filter="url(#blurMe)" /> <!-- pastel modrá -->
+        <circle cx="85%" cy="10%" r="150" fill="rgba(255,215,0,0.25)" filter="url(#blurMe)" /> <!-- pastel žltá -->
+        <circle cx="10%" cy="80%" r="250" fill="rgba(221,160,221,0.3)" filter="url(#blurMe)" /> <!-- pastel fialová -->
+        <circle cx="30%" cy="50%" r="180" fill="rgba(255,182,193,0.25)" filter="url(#blurMe)" />
+        <circle class="hidden lg:block" cx="70%" cy="30%" r="100" fill="rgba(173,216,230,0.3)" filter="url(#blurMe)" />
+        <circle cx="80%" cy="40%" r="130" fill="rgba(255,160,122,0.25)" filter="url(#blurMe)" />
+        <!-- pastel oranžová -->
+        <circle cx="40%" cy="70%" r="120" fill="rgba(135,206,235,0.25)" filter="url(#blurMe)" /> <!-- pastel modrá -->
+        <circle cx="80%" cy="80%" r="100" fill="rgba(255,215,0,0.25)" filter="url(#blurMe)" /> <!-- pastel žltá -->
+        <circle cx="60%" cy="90%" r="100" fill="rgba(173,216,230,0.3)" filter="url(#blurMe)" /> <!-- pastel modrá -->
+        <circle cx="15%" cy="95%" r="120" fill="rgba(255,182,193,0.3)" filter="url(#blurMe)" /> <!-- pastel ružová -->
+      </svg>
+
+      <div
+        class="absolute top-0 bottom-10 left-0 right-0 bg-linear-to-tr from-pink-700 via-transparent to-blue-800 -z-10"
+        style="mix-blend-mode: overlay;"></div>
+
+      <!-- DIVIDER -->
+      <div class="w-full overflow-hidden leading-none rotate-180 -mb-1 ">
+        <svg class="block w-full h-24" viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,70L180,85C360,100,540,50,720,60C900,70,1080,100,1260,85L1440,70L1440,120L0,120Z"
+            class="fill-slate-50" />
+        </svg>
       </div>
 
-      <!-- GRID -->
-      <div class="grid lg:grid-cols-2 items-start lg:p-10">
+      <div class="w-full lg:max-w-7xl xl:max-w-9xl 2xl:max-w-none lg:mx-auto xl:mx-0">
 
-        <!-- STICKY IMAGE -->
-        <div class="sticky min-h-screen inset-0 lg:top-35 xl:top-20 2xl:top-50">
-          <img src="./images/services/alektas-grooming-6894992_1920.jpg" alt="Grooming"
-            class="w-full h-full md:h-[60vh] lg:h-[70vh] xl:h-[80vh] 2xl:h-[60vh] lg:rounded-2xl object-cover shadow-2xl">
+        <div class="text-center mb-10">
+          <h1
+            class="uppercase text-6xl md:text-7xl lg:text-8xl font-black bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            Naše služby
+          </h1>
         </div>
 
-        <!-- SERVICES -->
-        <div class="p-4 lg:ml-4 xl:ml-10 2xl:ml-32">
-          <!-- 1. STRIHANIE -->
-          <div class="flex min-h-[80vh] justify-center items-center">
-            <div class="w-full text-center">
-              <h2
-                class="text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-linear-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent mb-4">
-                Strihanie</h2>
-              <p class="mx-auto max-w-xl text-xl md:text-2xl lg:text-3xl text-gray-200 font-light">
-                Profesionálne strihanie podľa štandardov plemena aj moderné trendy strihy
-              </p>
-            </div>
+        <!-- GRID -->
+        <div class="grid lg:grid-cols-2 items-start lg:p-10">
+
+          <!-- STICKY IMAGE -->
+          <div class="sticky min-h-screen inset-0 lg:top-35 xl:top-20 2xl:top-50">
+            <img src="./images/services/alektas-grooming-6894992_1920.jpg" alt="Grooming"
+              class="w-full h-full md:h-[60vh] lg:h-[70vh] xl:h-[80vh] 2xl:h-[60vh] lg:rounded-2xl object-cover shadow-2xl">
           </div>
 
-          <!-- 2. KUPANIE -->
-          <div class="flex min-h-[80vh] justify-center items-center">
-            <div class="w-full text-center">
-              <h2
-                class="text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-linear-to-r from-yellow-400 via-red-500 to-orange-400 bg-clip-text text-transparent mb-4">
-                Kúpanie</h2>
-              <p class="mx-auto max-w-xl text-xl md:text-2xl lg:text-3xl text-gray-200 font-light">
-                Profesionálne kúpanie s využitím kvalitných prostriedkov pre každý typ psa
+          <!-- SERVICES -->
+          <div class="p-4 lg:ml-4 xl:ml-10 2xl:ml-32">
+            <!-- 1. STRIHANIE -->
+            <div class="flex min-h-[80vh] justify-center items-center">
+              <div class="w-full text-center">
+                <h2
+                  class="text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-linear-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent mb-4">
+                  Strihanie</h2>
+                <p class="mx-auto max-w-xl text-xl md:text-2xl lg:text-3xl text-gray-200 font-light">
+                  Profesionálne strihanie podľa štandardov plemena aj moderné trendy strihy
+                </p>
+              </div>
             </div>
-          </div>
 
-          <!-- 3. VYČESÁVANIE -->
-          <div class="flex min-h-[80vh] justify-center items-center">
-            <div class="w-full text-center">
-              <h2
-                class="text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-linear-to-r from-green-400 via-white to-yellow-300 bg-clip-text text-transparent mb-4">
-                Vyčesávanie</h2>
-              <p class="mx-auto max-w-xl text-xl md:text-2xl lg:text-3xl text-gray-200 font-light">
-                Profesionálne vyčesávanie všetkých typov psích srstí
-              </p>
+            <!-- 2. KUPANIE -->
+            <div class="flex min-h-[80vh] justify-center items-center">
+              <div class="w-full text-center">
+                <h2
+                  class="text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-linear-to-r from-yellow-400 via-red-500 to-orange-400 bg-clip-text text-transparent mb-4">
+                  Kúpanie</h2>
+                <p class="mx-auto max-w-xl text-xl md:text-2xl lg:text-3xl text-gray-200 font-light">
+                  Profesionálne kúpanie s využitím kvalitných prostriedkov pre každý typ psa
+              </div>
             </div>
-          </div>
 
-          <!-- 4. DROBNÉ ÚPRAVY -->
-          <div class="flex min-h-[80vh] justify-center items-center">
-            <div class="w-full text-center">
-              <h2
-                class="text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-linear-to-r from-blue-400 via-pink-300 to-teal-300 bg-clip-text text-transparent mb-4">
-                Drobné úpravy</h2>
-              <p class="mx-auto max-w-xl text-xl md:text-2xl lg:text-3xl text-gray-200 font-light">
-                Prípadné úpravy výrazne zlepšia vzhľad a pohyb psa
-              </p>
+            <!-- 3. VYČESÁVANIE -->
+            <div class="flex min-h-[80vh] justify-center items-center">
+              <div class="w-full text-center">
+                <h2
+                  class="text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-linear-to-r from-green-400 via-white to-yellow-300 bg-clip-text text-transparent mb-4">
+                  Vyčesávanie</h2>
+                <p class="mx-auto max-w-xl text-xl md:text-2xl lg:text-3xl text-gray-200 font-light">
+                  Profesionálne vyčesávanie všetkých typov psích srstí
+                </p>
+              </div>
             </div>
-          </div>
 
-          <!-- 5. DOPLNKOVÉ -->
-          <div class="flex min-h-[80vh] justify-center items-center">
-            <div class="w-full text-center">
-              <h2
-                class="text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-linear-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent mb-4">
-                Doplnkové služby</h2>
-              <p class="mx-auto max-w-xl text-xl md:text-2xl lg:text-3xl text-gray-200 font-light">
-                Ošetrenie uší, úprava pazúrikov, čistenie zubov a ďalšie doplnkové služby
-              </p>
+            <!-- 4. DROBNÉ ÚPRAVY -->
+            <div class="flex min-h-[80vh] justify-center items-center">
+              <div class="w-full text-center">
+                <h2
+                  class="text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-linear-to-r from-blue-400 via-pink-300 to-teal-300 bg-clip-text text-transparent mb-4">
+                  Drobné úpravy</h2>
+                <p class="mx-auto max-w-xl text-xl md:text-2xl lg:text-3xl text-gray-200 font-light">
+                  Prípadné úpravy výrazne zlepšia vzhľad a pohyb psa
+                </p>
+              </div>
             </div>
+
+            <!-- 5. DOPLNKOVÉ -->
+            <div class="flex min-h-[80vh] justify-center items-center">
+              <div class="w-full text-center">
+                <h2
+                  class="text-5xl md:text-6xl lg:text-7xl font-black uppercase bg-linear-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent mb-4">
+                  Doplnkové služby</h2>
+                <p class="mx-auto max-w-xl text-xl md:text-2xl lg:text-3xl text-gray-200 font-light">
+                  Ošetrenie uší, úprava pazúrikov, čistenie zubov a ďalšie doplnkové služby
+                </p>
+              </div>
+            </div>
+
           </div>
 
         </div>
-
       </div>
+
     </div>
 
-</div>
-
+    </div>
 
   </section>
 
   <!-- PRICE SECTION -->
   <section id="cennik"
     class="relative overflow-hidden text-black pb-20 bg-linear-to-tr from-cyan-500/20 via-white to-pink-400/20">
+
+    <!-- DIVIDER -->
+    <div class="w-full overflow-hidden leading-none rotate-180 -mb-1 ">
+      <svg class="block w-full h-24" viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,70L180,85C360,100,540,50,720,60C900,70,1080,100,1260,85L1440,70L1440,120L0,120Z"
+          class="fill-black" />
+      </svg>
+    </div>
+
+    <!-- DIVIDER -->
+    <svg class="absolute bottom-0 left-0 w-full h-32" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="waveGradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#f472b6" /> <!-- pink -->
+          <stop offset="50%" stop-color="#6366f1" /> <!-- purple -->
+          <stop offset="100%" stop-color="#3b82f6" /> <!-- blue -->
+        </linearGradient>
+      </defs>
+      <path d="M0,40 C200,90 400,10 600,50 C800,90 1000,20 1200,60 L1200,120 L0,120 Z" fill="url(#waveGradient)" />
+    </svg>
+
+    <!-- LINEAR BOTTOM BORDER -->
+    <div
+      class="absolute bottom-20 left-1/4 w-[400px] h-[400px] bg-purple-700 opacity-20 blur-[160px] rounded-full -z-10">
+    </div>
 
     <h1
       class="uppercase text-center py-20 text-6xl md:text-7xl lg:text-8xl font-black bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -307,7 +386,7 @@
 
     <!-- PAWS -->
     <div
-      class="flex flex-col justify-center md:flex-row items-start gap-4 sm:gap-6 md:gap-4 px-2 sm:px-4 md:px-4 xl:px-20">
+      class="flex flex-col justify-center md:flex-row items-start gap-4 sm:gap-6 md:gap-4 px-2 sm:px-4 md:px-4 xl:px-20 pb-20">
       <label for="s" class="paw flex flex-col items-center text-center">
         <img src="./images/paws/paw_s.png">
         <p>Yorkšírky teriér, Maltézsky psík..</p>
@@ -623,7 +702,22 @@
 
   <!-- CONTACT -->
   <section id="kontakt" class="relative">
-    <div class="w-full lg:max-w-7xl xl:max-w-9xl lg:mx-auto xl:mx-auto px-10">
+
+    <!-- DIVIDER LINEAR THIN-->
+    <svg class="relative top-0 left-0 w-full h-16" viewBox="0 0 1200 40" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="waveLineGradient" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#f472b6" />
+          <stop offset="50%" stop-color="#6366f1" />
+          <stop offset="100%" stop-color="#3b82f6" />
+        </linearGradient>
+      </defs>
+      <path d="M0 20 C150 0 350 40 600 20 C850 0 1050 40 1200 20" fill="transparent" stroke="url(#waveLineGradient)"
+        stroke-width="3" />
+    </svg>
+
+    <!-- CONTACT -->
+    <div class="w-full lg:max-w-7xl xl:max-w-9xl lg:mx-auto xl:mx-auto px-10 pt-10">
 
       <div class="text-center mb-10">
         <h1
@@ -639,7 +733,7 @@
         class="grid grid-cols-1 md:grid-cols-3 max-w-6xl lg:max-w-4xl mx-auto place-items-center gap-6 items-stretch">
         <div
           class="max-h-64 lg:max-h-80 w-full max-w-sm border border-gray-200 shadow-md flex flex-col items-center p-4 lg:p-8 rounded-xl text-center gap-y-2">
-          <a href="tel:+421905123456">
+          <a href="tel:+421908030410">
             <i class="fa-solid fa-phone text-3xl lg:text-5xl pb-2"></i>
             <h4 class="text-2xl lg:text-3xl text-pink-500 font-bold">Telefón</h4>
             <p class="text-xl lg:text-2xl">+421 908 030 410</p>
@@ -759,20 +853,6 @@
 
     </div>
   </footer>
-
-
-  <section class="relative bg-black text-white py-24">
-    <h2 class="text-5xl font-black">Sekcia 1</h2>
-
-    <!-- divider dole -->
-    <svg class="absolute bottom-0 left-0 w-full h-30" viewBox="0 0 1200 120" preserveAspectRatio="none">
-      <path d="M0,40 C200,90 400,10 600,50 C800,90 1000,20 1200,60 L1200,120 L0,120 Z" fill="#ffffff"></path>
-    </svg>
-  </section>
-
-  <section class="bg-white py-24">
-    <h2 class="text-5xl font-black">Sekcia 2</h2>
-  </section>
 
 </body>
 
