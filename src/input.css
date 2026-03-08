@@ -20,20 +20,6 @@
     background-repeat: no-repeat;
   }
 
-  .services-bg {
-    background-image: url('./images/services_mobile.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .services-bg2 {
-    background-image: url('./others/blob-scene-haikei.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
   .footer-bg {
     background-image: url('./images/services_footer.jpg');
     background-size: cover;
@@ -44,9 +30,6 @@
   @media (min-width: 768px) {
     .hero-bg {
       background-image: url('./images/hero_desktop2.jpg');
-    }
-    .services-bg {
-      background-image: url('./images/services_desktop.jpg');
     }
   }
 
@@ -103,11 +86,11 @@
 }
 
 .slider {
-  @apply relative h-90 sm:h-120 md:h-180 mx-auto overflow-hidden py-15 md:pt-20;
+  @apply relative mx-auto overflow-hidden py-15 md:pt-20;
 }
 
 .slide-track {
-  @apply flex w-max;
+  @apply flex w-max items-stretch;
   animation: scroll 120s linear infinite;
 }
 
@@ -116,20 +99,24 @@
 }
 
 @keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .slide {
-  @apply flex shrink-0 w-35 sm:w-50 md:w-87.5 h-full p-3 md:p-4;
+  @apply shrink-0 w-35 sm:w-50 md:w-87.5 aspect-[4/5] p-3 md:p-4;
 }
 
 .slide img {
-  @apply w-full h-full object-cover rounded-xl transition duration-500;
+  @apply block w-full h-full object-cover rounded-xl transition duration-500;
 }
 
 .slide img:hover {
-  @apply scale-130;
+  @apply scale-110;
 }
 
 .slider::before,
@@ -145,4 +132,5 @@
 .slider::after {
   @apply right-0 bg-linear-to-l from-white/60 to-transparent;
 }
+
 }

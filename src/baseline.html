@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="sk">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRENDY DOG psí salón</title>
+  <link rel="stylesheet" href="./output-baseline.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="./images/favicon_io_black_bgwhite/favicon.ico">
+  <link rel="icon" href="./images/favicon_io_black/favicon.ico" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="./images/favicon_io_white/favicon.ico" media="(prefers-color-scheme: dark)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Titan+One&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="bg-slate-50">
+  <!-- HERO SEKCIA -->
+  <section id="domov" class="hero-bg relative flex min-h-screen flex-col sm:pt-4">
+
+    <!-- NAVBAR -->
+    <header class="absolute top-0 z-50 flex w-full items-center justify-between  px-4 py-3 bg-transparent">
+      <!-- LOGO -->
+      <a href="#" class="z-50">
+        <img src="./images/logo_white_2480x1594.png" alt="TRENDY DOG"
+          class="h-20 max-w-full sm:h-32 2xl:h-36 ml-2 md:ml-6 xl:ml-15" />
+      </a>
+
+      <!-- MENU ICON -->
+      <button class="toggle-button z-50 text-2xl text-white sm:text-3xl lg:hidden relative">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- DESKTOP MENU -->
+      <nav class="z-50 hidden lg:flex lg:items-center mr-2 md:mr-6 xl:mr-15">
+
+        <ul class="flex gap-10 text-lg font-bold text-white lg:text-lg xl:text-xl 2xl:text-2xl">
+          <li>
+            <a href="#domov" class="rounded-lg">DOMOV</a>
+          </li>
+          <li>
+            <a href="#sluzby" class="rounded-lg">SLUŽBY</a>
+          </li>
+          <li>
+            <a href="#cennik" class="rounded-lg">CENNÍK</a>
+          </li>
+          <li>
+            <a href="#galeria" class="rounded-lg">GALÉRIA</a>
+          </li>
+          <li>
+            <a href="#kontakt" class="rounded-lg">KONTAKT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <nav
+      class="dropdown-menu fixed inset-0 z-40 flex hidden flex-col items-center justify-center gap-4 overflow-hidden bg-black/40 text-white backdrop-blur-md">
+      <ul class="flex flex-col items-center gap-3 space-y-8 text-lg font-bold text-white">
+        <li>
+          <a href="#domov" class="rounded-lg">DOMOV</a>
+        </li>
+        <li>
+          <a href="#sluzby" class="rounded-lg">SLUŽBY</a>
+        </li>
+        <li>
+          <a href="#cennik" class="rounded-lg">CENNÍK</a>
+        </li>
+        <li>
+          <a href="#galeria" class="rounded-lg">GALÉRIA</a>
+        </li>
+        <li>
+          <a href="#kontakt" class="rounded-lg">KONTAKT</a>
+        </li>
+      </ul>
+    </nav>
+
+    <script>
+      const toggleBtn = document.querySelector(".toggle-button");
+      const dropdown = document.querySelector(".dropdown-menu");
+      const dropdownLinks = document.querySelectorAll(".dropdown-menu a");
+
+      toggleBtn.addEventListener("click", () => {
+        dropdown.classList.toggle("hidden");
+      });
+
+      dropdownLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          dropdown.classList.add("hidden");
+        });
+      });
+    </script>
+
+    <!-- SPACE -->
+    <div class="flex-1"></div>
+
+    <!-- HERO text -->
+    <article class="flex items-center px-4 mb-25 sm:w-[70%] md:p-10 lg:px-10 2xl:px-15">
+      <div class="flex flex-col justify-end">
+        <h1 class="z-10 text-5xl font-extrabold text-white sm:text-6xl xl:text-7xl 2xl:text-8xl">
+          TRENDY DOG
+        </h1>
+        <h2
+          class="z-10 bg-linear-to-r from-pink-300 via-purple-300 to-blue-300 bg-clip-text pb-2 text-5xl font-extrabold text-transparent sm:text-6xl xl:text-7xl 2xl:text-8xl">
+          psí salón
+        </h2>
+        <p
+          class="z-10 py-4 text-left text-lg text-gray-300 sm:text-2xl md:text-justify lg:w-[85%] xl:w-[70%] xl:text-2xl 2xl:text-3xl">
+          Profesionálne služby poskytované pre vašich štvornohých miláčikov.
+        </p>
+
+        <!-- LINK BUTTONS TO CONTACT -->
+        <div class="flex gap-2 sm:gap-4 xl:gap-8">
+          <!-- PHONE -->
+          <div
+            class="z-10 rounded-xl bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 p-2 text-white sm:p-2 lg:rounded-2xl">
+            <a href="tel:+421905123456">
+              <div class="flex items-center justify-center">
+                <svg class="h-10 w-10 sm:h-10 sm:w-10 xl:h-12 xl:w-12 2xl:h-15 2xl:w-15" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+          <!-- MESSENGER -->
+          <div class="z-10 rounded-xl bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 p-2 text-white sm:p-2">
+            <a href="https://m.me/100043366519536" target="_blank">
+              <div class="flex items-center justify-center">
+                <svg class="h-10 w-10 sm:h-10 sm:w-10 xl:h-12 xl:w-12 2xl:h-15 2xl:w-15" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+          <!-- FACEBOOK -->
+          <div class="z-10 rounded-xl bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 p-2 text-white sm:p-2">
+            <a href="https://www.facebook.com/people/Trendy-dog-ps%C3%AD-sal%C3%B3n/100043366519536/" target="_blank">
+              <div class="flex items-center justify-center">
+                <svg class="h-10 w-10 sm:h-10 sm:w-10 xl:h-12 xl:w-12 2xl:h-15 2xl:w-15" fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <div class="absolute inset-0 z-0 bg-black/50"></div>
+    <!-- DIVIDER-->
+    <svg class="absolute bottom-0 left-0 w-full h-10" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,40 C200,90 400,10 600,50 C800,90 1000,20 1200,60 L1200,120 L0,120 Z" fill="#f8fafc"></path>
+    </svg>
+
+  </section>
+
+  <!-- SECTION ABOUT SALON -->
+  <section class="relative">
+    <div class="m-5 lg:m-10 xl:m-15 2xl:m-20">
+
+      <!--FIRST ROW-->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center">
+        <div
+          class="rok-counter text-6xl md:text-7xl 2xl:text-8xl text-black font-extrabold text-center 3xl:text-right md:pr-20 3xl:pr-0 py-2">
+          <span class="rok-pocet">10</span>
+        </div>
+        <div class="text-3xl 2xl:text-4xl text-gray-400 font-medium uppercase text-left lg:text-center py-2">rokov
+          starostlivosti</div>
+        <div class="text-3xl 2xl:text-4xl text-gray-600 font-bold uppercase text-right 3xl:text-left py-2">o psiu krásu
+        </div>
+      </div>
+
+      <!--SECOND ROW-->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center lg:pt-10 2xl:pt-20">
+        <div
+          class="text-2xl md:text-3xl 2xl:text-4xl text-black font-extralight uppercase text-left 3xl:text-center py-2">
+          profesionálne strihanie</div>
+        <div class="text-6xl 2xl:text-7xl text-pink-500 font-extrabold uppercase py-2 text-center">láska</div>
+        <div
+          class="text-3xl 2xl:text-4xl text-gray-600 font-extralight uppercase text-center sm:text-right 3xl:text-center py-2">
+          individuálny prístup</div>
+      </div>
+
+      <!--THRID ROW-->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center lg:pt-10 2xl:pt-20">
+        <div
+          class="text-4xl 2xl:text-5xl text-black font-extrabold uppercase text-center sm:text-left 3xl:text-center py-2">
+          trendy</div>
+        <div class="text-3xl 2xl:text-4xl text-gray-400 font-extralight uppercase text-right sm:text-center py-2">bez
+          stresu</div>
+        <div
+          class="text-3xl 2xl:text-4xl text-gray-600 font-bold uppercase text-center sm:text-right 3xl:text-center py-2">
+          krása</div>
+      </div>
+
+      <!--TEXT-->
+      <div class="text-center my-8 lg:my-10 2xl:my-20 3xl:my-25 text-lg sm:text-xl 2xl:text-2xl 3xl:text-3xl">
+        <p>Vaša dôvera prináša pokoj – a pokoj znamená spokojného psa.</p>
+        <p class="font-bold text-pink-500 py-2">BEZ STRESU. BEZ OBÁV.</p>
+        <p>Každý pes je pre nás jedinečný.</p>
+      </div>
+
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const startYear = 2016;
+        const currentYear = new Date().getFullYear();
+        const years = currentYear - startYear; // 2026 = 10
+
+        const pocetEl = document.querySelector('.rok-pocet');
+        if (pocetEl) {
+          pocetEl.textContent = years; // Iba zobrazí 10
+        }
+      });
+    </script>
+
+  </section>
+
+
+  <!--SERVICES SECTION-->
+  <section id="sluzby" class="min-h-[400vh]">
+
+    <!-- SERVICES -->
+    <div class="relative bg-black">
+
+      <!-- CIRCLES BG -->
+      <svg class="absolute inset-0 w-full h-full overflow-visible" preserveAspectRatio="none">
+        <defs>
+          <!-- FILTER-->
+          <filter id="blurMe" x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="90" />
+          </filter>
+        </defs>
+
+
+        <!-- CIRCLES -->
+        <circle cx="15%" cy="25%" r="250" fill="rgba(255,182,193,0.3)" filter="url(#blurMe)" /> <!-- pastel ružová -->
+        <circle cx="70%" cy="60%" r="200" fill="rgba(173,216,230,0.3)" filter="url(#blurMe)" /> <!-- pastel modrá -->
+        <circle cx="85%" cy="10%" r="150" fill="rgba(255,215,0,0.25)" filter="url(#blurMe)" /> <!-- pastel žltá -->
+        <circle cx="10%" cy="80%" r="190" fill="rgba(221,160,221,0.3)" filter="url(#blurMe)" /> <!-- pastel fialová -->
+        <circle cx="30%" cy="50%" r="180" fill="rgba(255,182,193,0.25)" filter="url(#blurMe)" />
+        <circle class="hidden lg:block" cx="70%" cy="30%" r="100" fill="rgba(173,216,230,0.3)" filter="url(#blurMe)" />
+        <circle cx="80%" cy="40%" r="130" fill="rgba(255,160,122,0.25)" filter="url(#blurMe)" />
+        <!-- pastel oranžová -->
+        <circle cx="40%" cy="70%" r="120" fill="rgba(135,206,235,0.25)" filter="url(#blurMe)" /> <!-- pastel modrá -->
+        <circle cx="15%" cy="95%" r="100" fill="rgba(255,182,193,0.3)" filter="url(#blurMe)" /> <!-- pastel ružová -->
+      </svg>
+
+      <div
+        class="absolute top-0 bottom-10 left-0 right-0 bg-linear-to-tr from-pink-700 via-transparent to-blue-800 -z-10"
+        style="mix-blend-mode: overlay;"></div>
+
+      <!-- DIVIDER -->
+      <div class="w-full overflow-hidden leading-none rotate-180 -mb-1 ">
+        <svg class="block w-full h-24" viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,70L180,85C360,100,540,50,720,60C900,70,1080,100,1260,85L1440,70L1440,120L0,120Z"
+            class="fill-slate-50" />
+        </svg>
+      </div>
+
+      <div class="w-full lg:max-w-7xl xl:max-w-9xl 2xl:max-w-none lg:mx-auto xl:mx-0">
+
+        <div class="text-center mb-10">
+          <h1
+            class="uppercase font-bold pt-4 text-4xl sm:text-5xl md:text-6xl xl:text-7xl bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            Naše služby
+          </h1>
+        </div>
+
+        <!-- GRID -->
+        <div class="grid lg:grid-cols-2 items-start lg:p-10">
+
+          <!-- STICKY IMAGE -->
+          <div class="sticky min-h-screen inset-0 lg:top-35 xl:top-20 2xl:top-50">
+            <img src="./images/services/alektas-grooming-6894992_1920.jpg" alt="Grooming"
+              class="w-full h-full md:h-[60vh] lg:h-[70vh] xl:h-[80vh] 2xl:h-[60vh] lg:rounded-2xl object-cover shadow-2xl">
+          </div>
+
+          <!-- SERVICES -->
+          <div class="p-4 lg:ml-4 xl:ml-10 2xl:ml-32">
+            <!-- 1. STRIHANIE -->
+            <div class="flex min-h-[80vh] justify-center items-center">
+              <div class="w-full text-center">
+                <h2
+                  class="text-3xl md:text-4xl lg:text-5xl p-4 font-black uppercase bg-linear-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent mb-4">
+                  Strihanie</h2>
+                <p class="mx-auto max-w-xl text-xl md:text-2xl lg:text-2xl text-gray-200 font-light">
+                  Profesionálne strihanie podľa štandardov plemena aj moderné trendy strihy na želanie zákazníka.
+                </p>
+              </div>
+            </div>
+
+            <!-- 2. KUPANIE -->
+            <div class="flex min-h-[80vh] justify-center items-center">
+              <div class="w-full text-center">
+                <h2
+                  class="text-3xl md:text-4xl lg:text-5xl font-black p-4 uppercase bg-linear-to-r from-yellow-400 via-red-500 to-orange-400 bg-clip-text text-transparent mb-4">
+                  Kúpanie</h2>
+                <p class="mx-auto max-w-xl text-xl md:text-2xl lg:text-2xl text-gray-200 font-light">
+                  Profesionálne kúpanie s využitím kvalitných prostriedkov pre každý typ srsti.
+              </div>
+            </div>
+
+            <!-- 3. VYČESÁVANIE -->
+            <div class="flex min-h-[80vh] justify-center items-center">
+              <div class="w-full text-center">
+                <h2
+                  class="text-3xl md:text-4xl lg:text-5xl font-black p-4 uppercase bg-linear-to-r from-green-400 via-white to-yellow-300 bg-clip-text text-transparent mb-4">
+                  Vyčesávanie</h2>
+                <p class="mx-auto max-w-xl text-xl md:text-2xl lg:text-2xl text-gray-200 font-light">
+                  Vyčesávanie pre čistú srsť bez plstí. Odstránenie podsady, prevencia pĺznutia, odstránenie
+                  splstnatelej srsti.
+                </p>
+              </div>
+            </div>
+
+            <!-- 4. DROBNÉ ÚPRAVY -->
+            <div class="flex min-h-[80vh] justify-center items-center">
+              <div class="w-full text-center">
+                <h2
+                  class="text-3xl md:text-4xl lg:text-5xl font-black p-4 uppercase bg-linear-to-r from-blue-400 via-pink-300 to-teal-300 bg-clip-text text-transparent mb-4">
+                  Drobné úpravy</h2>
+                <p class="mx-auto max-w-xl text-xl md:text-2xl lg:text-2xl text-gray-200 font-light">
+                  Prípadné úpravy výrazne zlepšia vzhľad a pohyb psa. Úprava chvosta, uší, pazúrikov, brucha, zadku a
+                  ďalšie drobné úpravy podľa potreby.
+                </p>
+              </div>
+            </div>
+
+            <!-- 5. DOPLNKOVÉ -->
+            <div class="flex min-h-[80vh] justify-center items-center">
+              <div class="w-full text-center">
+                <h2
+                  class="text-3xl md:text-4xl lg:text-5xl font-black p-4 uppercase bg-linear-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent mb-4">
+                  Doplnkové služby</h2>
+                <p class="mx-auto max-w-xl text-xl md:text-2xl lg:text-2xl text-gray-200 font-light">
+                  Čistenie očí, úprava pazúrikov, čistenie a depilácia uší.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+
+  </section>
+
+  <!-- PRICE SECTION -->
+  <section id="cennik"
+    class="relative overflow-hidden text-black pb-20 bg-linear-to-tr from-cyan-500/20 via-white to-pink-400/20">
+
+    <!-- DIVIDER -->
+    <div class="w-full overflow-hidden leading-none rotate-180 -mb-1 ">
+      <svg class="block w-full h-24" viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,70L180,85C360,100,540,50,720,60C900,70,1080,100,1260,85L1440,70L1440,120L0,120Z"
+          class="fill-black" />
+      </svg>
+    </div>
+
+    <!-- DIVIDER -->
+    <svg class="absolute bottom-0 left-0 w-full h-32" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="waveGradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#f472b6" /> <!-- pink -->
+          <stop offset="50%" stop-color="#6366f1" /> <!-- purple -->
+          <stop offset="100%" stop-color="#3b82f6" /> <!-- blue -->
+        </linearGradient>
+      </defs>
+      <path d="M0,40 C200,90 400,10 600,50 C800,90 1000,20 1200,60 L1200,120 L0,120 Z" fill="url(#waveGradient)" />
+    </svg>
+
+    <!-- LINEAR BOTTOM BORDER -->
+    <div
+      class="absolute bottom-20 left-1/4 w-[400px] h-[400px] bg-purple-700 opacity-20 blur-[160px] rounded-full -z-10">
+    </div>
+
+    <h1
+      class="uppercase text-center  pt-4 text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+      cenník
+    </h1>
+
+    <!-- RADIO -->
+    <input type="radio" name="size" id="close" class="hidden" checked>
+    <input type="radio" name="size" id="s" class="hidden">
+    <input type="radio" name="size" id="m" class="hidden">
+    <input type="radio" name="size" id="l" class="hidden">
+    <input type="radio" name="size" id="xl" class="hidden">
+    <input type="radio" name="size" id="xxl" class="hidden">
+
+    <!-- PAWS -->
+    <div
+      class="flex flex-col justify-center md:flex-row items-start gap-4 sm:gap-6 md:gap-4 px-2 sm:px-4 md:px-4 xl:px-20 pb-20">
+      <label for="s" class="paw flex flex-col items-center text-center">
+        <img src="./images/paws/paw_s.png">
+        <p>Yorkšírky teriér, Maltézsky psík..</p>
+      </label>
+
+      <label for="m" class="paw flex flex-col items-center text-center">
+        <img src="./images/paws/paw_m.png">
+        <p>Anglický kokeršpaniel, Stredný pudel..</p>
+      </label>
+
+      <label for="l" class="paw flex flex-col items-center text-center">
+        <img src="./images/paws/paw_l.png">
+        <p>Erdel teriér...</p>
+      </label>
+
+      <label for="xl" class="paw flex flex-col items-center text-center">
+        <img src="./images/paws/paw_xl.png">
+        <p>Zlatý retvíver, Labrador..</p>
+      </label>
+
+      <label for="xxl" class="paw flex flex-col items-center text-center">
+        <img src="./images/paws/paw_xxl.png">
+        <p>Kráľovský pudel, Bobtail..</p>
+      </label>
+    </div>
+
+    <!-- FLOATING PANEL -->
+    <div
+      class="overlay w-full fixed inset-0 flex items-center justify-center opacity-0 pointer-events-none z-40 backdrop-blur-sm overflow-hidden">
+
+      <!-- GLASS -->
+      <div
+        class="panel bg-white/90 lg:bg-white/40 relative rounded-3xl  w-full max-w-sm md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-2 md:mx-4 
+            p-6 md:p-10 z-50 shadow-[0_8px_32px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.9),inset_0_0_20px_rgba(255,255,255,0.1)]">
+
+        <!-- CLOSE BUTTON -->
+        <label for="close"
+          class="absolute top-6 right-6 text-5xl cursor-pointer text-black/80 font-extrabold">×</label>
+
+        <!-- S -->
+        <div class="content content-s">
+          <h3 class="title">S</h3>
+          <div class="flex justify-between items-center py-1 border-b border-dotted border-gray-300">
+            <span class="text-xl sm:text-2xl">strihanie</span>
+            <span class="text-xl font-bold sm:text-2xl">od 26€</span>
+          </div>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">kúpanie</span>
+            <span class="text-xl font-bold sm:text-2xl">od 10€</span>
+          </div>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">vyčesávanie</span>
+            <span class="text-xl font-bold sm:text-2xl">od 25€</span>
+          </div>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">drobné úpravy</span>
+            <span class="text-xl font-bold sm:text-2xl">od 15€</span>
+          </div>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">doplnkové služby</span>
+            <span class="text-xl font-bold sm:text-2xl">od 3€</span>
+          </div>
+        </div>
+
+        <!-- M -->
+        <div class="content content-m">
+          <h3 class="title">M</h3>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">strihanie</span>
+            <span class="text-xl font-bold sm:text-2xl">od 28€</span>
+          </div>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">kúpanie</span>
+            <span class="text-xl font-bold sm:text-2xl">od 14€</span>
+          </div>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">vyčesávanie</span>
+            <span class="text-xl font-bold sm:text-2xl">od 25€</span>
+          </div>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">drobné úpravy</span>
+            <span class="text-xl font-bold sm:text-2xl">od 18€</span>
+          </div>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">doplnkové služby</span>
+            <span class="text-xl font-bold sm:text-2xl">od 3€</span>
+          </div>
+        </div>
+
+        <!-- L -->
+        <div class="content content-l">
+          <h3 class="title">L</h3>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">strihanie</span>
+            <span class="text-xl font-bold sm:text-2xl">od 35€</span>
+          </div>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">kúpanie</span>
+            <span class="text-xl font-bold sm:text-2xl">od 20€</span>
+          </div>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">vyčesávanie</span>
+            <span class="text-xl font-bold sm:text-2xl">od 25€</span>
+          </div>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">drobné úpravy</span>
+            <span class="text-xl font-bold sm:text-2xl">od 21€</span>
+          </div>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">doplnkové služby</span>
+            <span class="text-xl font-bold sm:text-2xl">od 3€</span>
+          </div>
+        </div>
+
+        <!-- XL -->
+        <div class="content content-xl">
+          <h3 class="title">XL</h3>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">strihanie</span>
+            <span class="text-xl font-bold sm:text-2xl">od 40€</span>
+          </div>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">kúpanie</span>
+            <span class="text-xl font-bold sm:text-2xl">od 30€</span>
+          </div>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">vyčesávanie</span>
+            <span class="text-xl font-bold sm:text-2xl">od 25€</span>
+          </div>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">drobné úpravy</span>
+            <span class="text-xl font-bold sm:text-2xl">od 25€</span>
+          </div>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">doplnkové služby</span>
+            <span class="text-xl font-bold sm:text-2xl">od 3€</span>
+          </div>
+        </div>
+
+        <!-- XXL -->
+        <div class="content content-xxl">
+          <h3 class="title">XXL</h3>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">strihanie</span>
+            <span class="text-xl font-bold sm:text-2xl">od 50€</span>
+          </div>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">kúpanie</span>
+            <span class="text-xl font-bold sm:text-2xl">od 35€</span>
+          </div>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">vyčesávanie</span>
+            <span class="text-xl font-bold sm:text-2xl">od 25€</span>
+          </div>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">drobné úpravy</span>
+            <span class="text-xl font-bold sm:text-2xl">od 30€</span>
+          </div>
+          <div class="flex justify-between items-center py-1 border-b border-gray-300">
+            <span class="text-xl sm:text-2xl">doplnkové služby</span>
+            <span class="text-xl font-bold sm:text-2xl">od 3€</span>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- DIVIDER-->
+    <svg class="absolute bottom-0 left-0 w-full h-30" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,40 C200,90 400,10 600,50 C800,90 1000,20 1200,60 L1200,120 L0,120 Z" fill="#f8fafc"></path>
+    </svg>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="galeria">
+
+    <h1
+      class="uppercase text-center mt-12 md:mt-20 pt-4 text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold bg-linear-to-r from-blue-400  to-pink-500 bg-clip-text text-transparent">
+      galéria
+    </h1>
+
+    <div class="slider">
+      <div class="slide-track">
+
+        <div class="slide">
+          <img src="./images/gallery/2.jpg" alt="Gallery Image 2">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/3.jpg" alt="Gallery Image 3">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/4.jpg" alt="Gallery Image 4">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/5.jpg" alt="Gallery Image 5">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/7.jpg" alt="Gallery Image 7">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/10.jpg" alt="Gallery Image 10">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/11.jpg" alt="Gallery Image 11">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/12.jpg" alt="Gallery Image 12">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/13.jpg" alt="Gallery Image 13">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/14.jpg" alt="Gallery Image 14">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/15.jpg" alt="Gallery Image 15">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/16.jpg" alt="Gallery Image 16">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/17.jpg" alt="Gallery Image 17">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/18.jpg" alt="Gallery Image 18">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/19.jpg" alt="Gallery Image 19">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/20.jpg" alt="Gallery Image 20">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/21.jpg" alt="Gallery Image 21">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/22.jpg" alt="Gallery Image 22">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/23.jpg" alt="Gallery Image 23">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/24.jpg" alt="Gallery Image 24">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/25.jpg" alt="Gallery Image 25">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/26.jpg" alt="Gallery Image 26">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/27.jpg" alt="Gallery Image 27">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/28.jpg" alt="Gallery Image 28">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/29.jpg" alt="Gallery Image 29">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/30.jpg" alt="Gallery Image 30">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/31.jpg" alt="Gallery Image 31">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/32.jpg" alt="Gallery Image 32">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/33.jpg" alt="Gallery Image 33">
+        </div>
+        <div class="slide">
+          <img src="./images/gallery/34.jpg" alt="Gallery Image 34">
+        </div>
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section id="kontakt" class="relative">
+
+    <!-- DIVIDER LINEAR THIN-->
+    <svg class="relative top-0 left-0 w-full h-16" viewBox="0 0 1200 40" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="waveLineGradient" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#f472b6" />
+          <stop offset="50%" stop-color="#6366f1" />
+          <stop offset="100%" stop-color="#3b82f6" />
+        </linearGradient>
+      </defs>
+      <path d="M0 20 C150 0 350 40 600 20 C850 0 1050 40 1200 20" fill="transparent" stroke="url(#waveLineGradient)"
+        stroke-width="3" />
+    </svg>
+
+    <!-- CONTACT -->
+    <div class="w-full lg:max-w-7xl xl:max-w-9xl lg:mx-auto xl:mx-auto px-10 pt-10">
+
+      <div class="text-center mb-10">
+        <h1
+          class="uppercase pt-4 text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          kontakt
+        </h1>
+        <p class="mt-10 mx-auto max-w-3xl lg:max-w-4xl text-xl md:text-2xl lg:text-3xl font-light">Kontaktujte nás
+          telefonicky alebo prostredníctvom messengera cez týždeň medzi <b>9:00</b> a <b>17:00</b>. Termín je potrebné
+          si dopredu
+          dohodnúť. Tešíme sa na Vašu návštevu!</p>
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 max-w-6xl lg:max-w-4xl mx-auto place-items-center gap-6 items-stretch">
+        <div
+          class="max-h-64 lg:max-h-80 w-full max-w-sm border border-gray-200 shadow-md flex flex-col items-center p-4 lg:p-8 rounded-xl text-center gap-y-2">
+          <a href="tel:+421908030410">
+            <i class="fa-solid fa-phone text-3xl lg:text-5xl pb-2"></i>
+            <h4 class="text-2xl lg:text-3xl text-pink-500 font-bold">Telefón</h4>
+            <p class="text-xl lg:text-2xl">+421 908 030 410</p>
+          </a>
+        </div>
+
+        <div
+          class="max-h-64 lg:max-h-80 w-full max-w-sm border border-gray-200 shadow-md flex flex-col items-center p-4 lg:p-8 rounded-xl text-center gap-y-2">
+          <i class="fa-solid fa-map-marker-alt text-3xl lg:text-5xl pb-2"></i>
+          <h4 class="text-2xl lg:text-3xl text-pink-500 font-bold">Adresa</h4>
+          <p class="text-xl lg:text-2xl">Dukelská štvrť 1402, 018 41 Dubnica nad Váhom</p>
+        </div>
+
+        <div
+          class="max-h-64 lg:max-h-80 w-full max-w-sm border border-gray-200 shadow-md flex flex-col items-center p-4 lg:p-8 rounded-xl text-center gap-y-2">
+          <i class="fa-solid fa-clock text-3xl lg:text-5xl pb-2"></i>
+          <h4 class="text-2xl lg:text-3xl text-pink-500 font-bold">Otváracia doba</h4>
+          <p class="text-xl lg:text-2xl">PO - PIA:<br> na objednávku</p>
+        </div>
+
+      </div>
+
+      <div class="flex justify-center mt-10 gap-6">
+        <!-- MESSENGER -->
+        <div class="z-10 rounded-full bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 p-2 text-white sm:p-4">
+          <a href="https://m.me/100043366519536" target="_blank">
+            <div class="flex items-center justify-center">
+              <svg class="h-10 w-10 sm:h-12 sm:w-12 xl:h-15 xl:w-15 2xl:h-20 2xl:w-20" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+              </svg>
+            </div>
+          </a>
+        </div>
+        <!-- FACEBOOK -->
+        <div class="z-10 rounded-full bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 p-2 text-white sm:p-4">
+          <a href="https://www.facebook.com/people/Trendy-dog-ps%C3%AD-sal%C3%B3n/100043366519536/" target="_blank">
+            <div class="flex items-center justify-center">
+              <svg class="h-10 w-10 sm:h-12 sm:w-12 xl:h-15 xl:w-15 2xl:h-20 2xl:w-20" fill="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- MAP -->
+    <div class="relative w-full h-96 mt-10">
+      <iframe class="absolute w-full h-full"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2619.0865415303774!2d18.18628767651132!3d48.97087699278365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471499ed4bfbdb5d%3A0x1ce4a1d16f839c3b!2zRHVrZWxza8OhIMWgdHZyxaUgMTQwMiwgMDE4IDQxIER1Ym5pY2EgbmFkIFbDoWhvbQ!5e0!3m2!1ssk!2ssk!4v1772649716192!5m2!1ssk!2ssk"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-bg relative py-8">
+
+    <div class="absolute inset-0 z-10 bg-black/70"></div>
+
+    <div class="relative w-full z-20 lg:max-w-7xl xl:max-w-9xl 2xl:max-w-none lg:mx-auto xl:mx-auto">
+
+      <div class="flex flex-col gap-8 px-4 md:px-6 xl:px-15 lg:flex-row  lg:justify-between mb-10">
+
+        <!-- LOGO + ADDRESS -->
+        <div class="z-50 flex flex-col items-center justify-center lg:text-left">
+          <a href="#">
+            <img src="./images/logo_white_2480x1594.png" alt="TRENDY DOG" class="h-25 max-w-full sm:h-28 xl:h-32" />
+          </a>
+          <p class="mt-3 max-w-xs text-center text-white sm:text-lg">Dukelská štvrť 1402,<br> 018 41 Dubnica nad Váhom
+          </p>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="z-50 lg:self-center">
+          <ul
+            class="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 font-medium text-white sm:text-md lg:text-lg xl:text-xl">
+            <li><a href="#domov" class="rounded-lg">DOMOV</a></li>
+            <li><a href="#sluzby" class="rounded-lg">SLUŽBY</a></li>
+            <li><a href="#cennik" class="rounded-lg">CENNÍK</a></li>
+            <li><a href="#galeria" class="rounded-lg">GALÉRIA</a></li>
+            <li><a href="#kontakt" class="rounded-lg">KONTAKT</a></li>
+          </ul>
+        </nav>
+
+        <!-- CONTACT ICONS -->
+        <div class="z-50 flex items-center justify-center gap-4">
+          <a href="tel:+421908030410"
+            class="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 border border-white/30 text-white"
+            aria-label="Telefon">
+            <i class="fa-solid fa-phone text-xl"></i>
+          </a>
+          <a href="https://m.me/100043366519536" target="_blank" rel="noopener noreferrer"
+            class="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 border border-white/30 text-white"
+            aria-label="Messenger">
+            <i class="fa-brands fa-facebook-messenger text-xl"></i>
+          </a>
+          <a href="https://www.facebook.com/people/Trendy-dog-ps%C3%AD-sal%C3%B3n/100043366519536/" target="_blank"
+            rel="noopener noreferrer"
+            class="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 border border-white/30 text-white"
+            aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f text-xl"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-10 border-t border-pink-500/70 pt-6 mx-10">
+        <p class="text-center text-white/80 text-xs sm:text-sm xl:text-lg">
+          &copy;
+          <script>document.write(new Date().getFullYear())</script> TRENDY DOG psí salón. Všetky práva vyhradené.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+
+</html>
