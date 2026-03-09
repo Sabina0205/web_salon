@@ -14,14 +14,35 @@
 
 @layer utilities {
   .hero-bg {
-    background-image: url('./images/hero_mobile2.jpg');
+    /* FALLBACK */
+    background-image: url('./images/hero_mobile_800x1200.jpg');
+
+    background-image: -webkit-image-set(
+      url('./images/hero_mobile_800x1200.webp') 1x,
+      url('./images/hero_mobile_800x1200.jpg') 1x
+    );
+    background-image: image-set(
+      url('./images/hero_mobile_800x1200.webp') 1x,
+      url('./images/hero_mobile_800x1200.jpg') 1x
+    );
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
 
   .footer-bg {
-    background-image: url('./images/services_footer.jpg');
+    /* FALLBACK */
+    background-image: url('./images/footer_mobile_800x450.jpg');
+    background-image: -webkit-image-set(
+      url('./images/footer_mobile_800x450.webp') 1x,
+      url('./images/footer_mobile_800x450.jpg') 1x
+    );
+    background-image: image-set(
+      url('./images/footer_mobile_800x450.webp') 1x,
+      url('./images/footer_mobile_800x450.jpg') 1x
+    );
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -29,10 +50,31 @@
 
   @media (min-width: 768px) {
     .hero-bg {
-      background-image: url('./images/hero_desktop2.jpg');
-    }
+      background-image: url('./images/hero_desktop_1920x1200.jpg');
 
+      background-image: -webkit-image-set(
+        url('./images/hero_desktop_1920x1200.webp') 1x,
+        url('./images/hero_desktop_1920x1200.jpg') 1x
+      );
+      background-image: image-set(
+        url('./images/hero_desktop_1920x1200.webp') 1x,
+        url('./images/hero_desktop_1920x1200.jpg') 1x
+      );
+    }
+    .footer-bg {
+    /* FALLBACK */
+    background-image: url('./images/footer_desktop_1920x450.jpg');
+    background-image: -webkit-image-set(
+      url('./images/footer_desktop_1920x450.webp') 1x,
+      url('./images/footer_desktop_1920x450.jpg') 1x
+    );
+    background-image: image-set(
+      url('./images/footer_desktop_1920x450.webp') 1x,
+      url('./images/footer_desktop_1920x450.jpg') 1x
+    );
   }
+  }
+}
 
 /* PRICE SECTION*/
 .paw {
@@ -106,6 +148,4 @@
 
 .slider::after {
   @apply right-0 bg-linear-to-l from-white/60 to-transparent;
-}
-
 }
