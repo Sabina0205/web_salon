@@ -29,14 +29,16 @@
   <section id="domov" class="hero-bg relative flex min-h-screen flex-col sm:pt-4">
 
     <!-- NAVBAR -->
-    <header class="absolute top-0 z-50 flex w-full items-center justify-between py-3"> 
+    <header class="absolute top-0 z-50 flex w-full items-center justify-between px-3 py-2 min-h-[32px]">
       <!-- LOGO -->
-      <a href="#" class="z-50" aria-label="DOMOV - TRENDY DOG psí salón">
-        <picture>
+      <a href="#" class="z-50 ml-2 lg:ml-4 p-0.5 flex-shrink-0" aria-label="TRENDY DOG">
+        <picture class="w-12 h-5 inline-block">
           <source srcset="./images/logo_white.webp" type="image/webp">
-          <img src="./images/logo_white.jpg" class="h-20 ml-4 lg:ml-8 sm:h-32 2xl:h-36 object-contain aspect-220/141" alt="logo" height="141" width="220">
+          <img src="./images/logo_white.jpg" width="48" height="20" class="h-full w-full object-contain"
+            alt="TRENDY DOG" loading="lazy">
         </picture>
       </a>
+
 
       <!-- MENU ICON -->
       <button class="toggle-button z-50 text-2xl text-white sm:text-3xl lg:hidden relative mr-4"
@@ -707,9 +709,7 @@
         <div
           class="max-h-64 lg:max-h-80 w-full max-w-sm border border-gray-200 shadow-md flex flex-col items-center p-4 lg:p-8 rounded-xl text-center gap-y-2">
           <div class="flex justify-center items-center pb-2">
-            <svg
-              class="h-12 w-12 lg:h-20 lg:w-20 text-black mx-auto"
-              fill="currentColor" viewBox="0 0 20 20">
+            <svg class="h-12 w-12 lg:h-20 lg:w-20 text-black mx-auto" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd"
                 d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
                 clip-rule="evenodd" />
@@ -722,9 +722,8 @@
         <div
           class="max-h-64 lg:max-h-80 w-full max-w-sm border border-gray-200 shadow-md flex flex-col items-center p-4 lg:p-8 rounded-xl text-center gap-y-2">
           <div class="flex justify-center items-center pb-2">
-            <svg
-              class="h-12 w-12 lg:h-20 lg:w-20 text-black mx-auto"
-              fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="h-12 w-12 lg:h-20 lg:w-20 text-black mx-auto" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
