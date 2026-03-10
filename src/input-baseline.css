@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Titan+One&display=swap');
-
 @theme {
   --breakpoint-3xl: 118.75rem;
 }
@@ -17,14 +15,10 @@
     /* FALLBACK */
     background-image: url('./images/hero_mobile_800x1200.jpg');
 
-    background-image: -webkit-image-set(
-      url('./images/hero_mobile_800x1200.webp') 1x,
-      url('./images/hero_mobile_800x1200.jpg') 1x
-    );
-    background-image: image-set(
-      url('./images/hero_mobile_800x1200.webp') 1x,
-      url('./images/hero_mobile_800x1200.jpg') 1x
-    );
+    background-image: -webkit-image-set(url('./images/hero_mobile_800x1200.webp') 1x,
+        url('./images/hero_mobile_800x1200.jpg') 1x);
+    background-image: image-set(url('./images/hero_mobile_800x1200.webp') 1x,
+        url('./images/hero_mobile_800x1200.jpg') 1x);
 
     background-size: cover;
     background-position: center;
@@ -34,14 +28,10 @@
   .footer-bg {
     /* FALLBACK */
     background-image: url('./images/footer_mobile_800x450.jpg');
-    background-image: -webkit-image-set(
-      url('./images/footer_mobile_800x450.webp') 1x,
-      url('./images/footer_mobile_800x450.jpg') 1x
-    );
-    background-image: image-set(
-      url('./images/footer_mobile_800x450.webp') 1x,
-      url('./images/footer_mobile_800x450.jpg') 1x
-    );
+    background-image: -webkit-image-set(url('./images/footer_mobile_800x450.webp') 1x,
+        url('./images/footer_mobile_800x450.jpg') 1x);
+    background-image: image-set(url('./images/footer_mobile_800x450.webp') 1x,
+        url('./images/footer_mobile_800x450.jpg') 1x);
 
     background-size: cover;
     background-position: center;
@@ -52,27 +42,20 @@
     .hero-bg {
       background-image: url('./images/hero_desktop_1920x1200.jpg');
 
-      background-image: -webkit-image-set(
-        url('./images/hero_desktop_1920x1200.webp') 1x,
-        url('./images/hero_desktop_1920x1200.jpg') 1x
-      );
-      background-image: image-set(
-        url('./images/hero_desktop_1920x1200.webp') 1x,
-        url('./images/hero_desktop_1920x1200.jpg') 1x
-      );
+      background-image: -webkit-image-set(url('./images/hero_desktop_1920x1200.webp') 1x,
+          url('./images/hero_desktop_1920x1200.jpg') 1x);
+      background-image: image-set(url('./images/hero_desktop_1920x1200.webp') 1x,
+          url('./images/hero_desktop_1920x1200.jpg') 1x);
     }
+
     .footer-bg {
-    /* FALLBACK */
-    background-image: url('./images/footer_desktop_1920x450.jpg');
-    background-image: -webkit-image-set(
-      url('./images/footer_desktop_1920x450.webp') 1x,
-      url('./images/footer_desktop_1920x450.jpg') 1x
-    );
-    background-image: image-set(
-      url('./images/footer_desktop_1920x450.webp') 1x,
-      url('./images/footer_desktop_1920x450.jpg') 1x
-    );
-  }
+      /* FALLBACK */
+      background-image: url('./images/footer_desktop_1920x450.jpg');
+      background-image: -webkit-image-set(url('./images/footer_desktop_1920x450.webp') 1x,
+          url('./images/footer_desktop_1920x450.jpg') 1x);
+      background-image: image-set(url('./images/footer_desktop_1920x450.webp') 1x,
+          url('./images/footer_desktop_1920x450.jpg') 1x);
+    }
   }
 }
 
@@ -80,6 +63,7 @@
 .paw {
   @apply w-28 sm:w-36 md:w-25 lg:w-32 xl:w-40 3xl:w-48 h-auto mx-auto pt-8;
 }
+
 .paw p {
   @apply pt-5 text-xl px-2 xl:text-2xl;
 }
@@ -99,20 +83,34 @@
 
 /* UNWRAPP OF PRICES */
 
-#s:checked ~ .overlay,
-#m:checked ~ .overlay,
-#l:checked ~ .overlay,
-#xl:checked ~ .overlay,
-#xxl:checked ~ .overlay {
+#s:checked~.overlay,
+#m:checked~.overlay,
+#l:checked~.overlay,
+#xl:checked~.overlay,
+#xxl:checked~.overlay {
   opacity: 1;
   pointer-events: auto;
 }
 
-#s:checked ~ .overlay .content-s { display: block; }
-#m:checked ~ .overlay .content-m { display: block; }
-#l:checked ~ .overlay .content-l { display: block; }
-#xl:checked ~ .overlay .content-xl { display: block; }
-#xxl:checked ~ .overlay .content-xxl { display: block; }
+#s:checked~.overlay .content-s {
+  display: block;
+}
+
+#m:checked~.overlay .content-m {
+  display: block;
+}
+
+#l:checked~.overlay .content-l {
+  display: block;
+}
+
+#xl:checked~.overlay .content-xl {
+  display: block;
+}
+
+#xxl:checked~.overlay .content-xxl {
+  display: block;
+}
 
 /*GALLERY*/
 
