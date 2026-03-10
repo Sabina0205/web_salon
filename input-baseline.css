@@ -6,19 +6,23 @@
 
 @font-face {
   font-family: 'Sour Gummy';
-  src: url('./fonts/sourgummy-400.woff2') format('woff2');
+  src: url('./fonts/sour-gummy-v3-latin-500.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: 'Sour Gummy';
-  src: url('./fonts/sourgummy-700.woff2') format('woff2');
+  src: url('./fonts/sour-gummy-v3-latin-700.woff2') format('woff2');
   font-weight: 700;
   font-display: swap;
   font-style: normal;
 }
-
+@layer base {
+  body {
+    font-family: 'Sour Gummy', cursive, sans-serif;
+  }
+}
 @layer utilities {
   .hero-bg {
     /* FALLBACK */
