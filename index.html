@@ -15,8 +15,8 @@
   </noscript>
 
   <!-- PRELOAD FONTS -->
-   <link rel="preload" href="./fonts/sour-gummy-v3-latin_latin-ext-700.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./fonts/sour-gummy-v3-latin_latin-ext-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/sour-gummy-v3-latin_latin-ext-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/sour-gummy-v3-latin_latin-ext-500.woff2" as="font" type="font/woff2" crossorigin>
   <!-- PRELOAD HERO -->
   <link rel="preload" href="./images/hero_mobile_800x1200.webp" as="image" media="(max-width: 767px)">
   <link rel="preload" href="./images/hero_desktop_1920x1200.webp" as="image" media="(min-width: 768px)">
@@ -299,11 +299,19 @@
           <!-- STICKY IMAGE -->
           <div class="sticky inset-0 md:top-35 xl:top-20 2xl:top-50 2xl:left-30 min-h-[80vh]">
             <picture>
+              <!-- MOBILE VERSION -->
+              <source media="(max-width: 768px)" srcset="./images/services/service_vycesanie_mobile.webp"
+                type="image/webp">
+              <!-- DESKTOP VERSION WebP -->
               <source srcset="./images/services/service_vycesanie.webp" type="image/webp">
-              <img src="./images/services/service_vycesanie.jpg" alt="Vyčesávanie psa"
+              <!-- FALLBACK -->
+              <img src="./images/services/service_vycesanie_mobile.jpg"
+                srcset="./images/services/service_vycesanie.jpg 900w" sizes="(max-width: 768px) 100vw, 50vw"
+                alt="Vyčesávanie psa"
                 class="w-full h-full md:h-[60vh] lg:h-[70vh] xl:h-[80vh] 2xl:h-[60vh] 2xl:max-w-220 md:rounded-2xl object-cover shadow-2xl"
                 loading="lazy" width="900" height="600">
             </picture>
+
           </div>
 
           <!-- SERVICES -->
@@ -392,7 +400,7 @@
       </svg>
     </div>
 
-        <!-- DIVIDER -->
+    <!-- DIVIDER -->
     <svg class="block absolute bottom-0 left-0 w-full h-32 -mb-px" viewBox="0 0 1200 120" preserveAspectRatio="none">
       <defs>
         <linearGradient id="waveGradient" x1="0" y1="0" x2="1" y2="1">
