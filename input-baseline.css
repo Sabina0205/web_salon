@@ -2,14 +2,14 @@
   font-family: 'Sour Gummy';
   src: url('./fonts/sour-gummy-v3-latin_latin-ext-500.woff2') format('woff2');
   font-weight: 400;
-  font-display: swap;
+  font-display: optional;
   font-style: normal;
 }
 @font-face {
   font-family: 'Sour Gummy';
   src: url('./fonts/sour-gummy-v3-latin_latin-ext-700.woff2') format('woff2');
   font-weight: 700;
-  font-display: swap;
+  font-display: optional;
   font-style: normal;
 }
 @layer base {
