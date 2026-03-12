@@ -181,25 +181,7 @@
     </svg>
 
   </section>
-  <!-- HERO ANIMATION-->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const elements = document.querySelectorAll(".fade-up");
 
-      elements.forEach((el, index) => {
-        el.style.opacity = 0;
-        el.style.transform = "translateY(16px)";
-
-        requestAnimationFrame(() => {
-          setTimeout(() => {
-            el.style.transition = "opacity 1s ease-out, transform 1s ease-out";
-            el.style.opacity = 1;
-            el.style.transform = "translateY(0)";
-          }, index * 300);
-        });
-      });
-    });
-  </script>
 
   <!-- SECTION ABOUT SALON -->
   <section class="relative">
@@ -639,6 +621,7 @@
       <path d="M0,40 C200,90 400,10 600,50 C800,90 1000,20 1200,60 L1200,120 L0,120 Z" fill="#f8fafc"></path>
     </svg>
   </section>
+
   <!-- GALLERY -->
   <section id="galeria">
 
