@@ -148,6 +148,10 @@
   @apply block w-full h-full object-cover rounded-xl;
 }
 
+.slide img:hover {
+  @apply scale-110;
+}
+
 .slider::before,
 .slider::after {
   content: '';
