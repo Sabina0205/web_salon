@@ -5,6 +5,7 @@
   font-display: optional;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Sour Gummy';
   src: url('./fonts/sour-gummy-v3-latin_latin-ext-700.woff2') format('woff2');
@@ -12,6 +13,7 @@
   font-display: optional;
   font-style: normal;
 }
+
 @layer base {
   body {
     font-family: 'Sour Gummy', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -25,6 +27,14 @@
 }
 
 @layer utilities {
+  .nav-hover {
+    @apply hover:text-pink-400 transition-colors duration-300;
+  }
+
+  .hero-icon-hover {
+    @apply hover:scale-110 transition-transform duration-300;
+  }
+
   .hero-bg {
     /* FALLBACK */
     background-image: url('./images/hero_mobile_800x1200.jpg');
@@ -97,6 +107,15 @@
 
 /* UNWRAPP OF PRICES */
 
+.paw-hover:hover {
+  @apply cursor-pointer scale-120 transition-transform duration-500;
+}
+
+.panel {
+  transform: scale(0.75);
+  transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
 #s:checked~.overlay,
 #m:checked~.overlay,
 #l:checked~.overlay,
@@ -104,6 +123,14 @@
 #xxl:checked~.overlay {
   opacity: 1;
   pointer-events: auto;
+}
+
+#s:checked~.overlay .panel,
+#m:checked~.overlay .panel,
+#l:checked~.overlay .panel,
+#xl:checked~.overlay .panel,
+#xxl:checked~.overlay .panel {
+  transform: scale(1);
 }
 
 #s:checked~.overlay .content-s {
@@ -126,6 +153,7 @@
   display: block;
 }
 
+
 /*GALLERY*/
 
 #galeria {
@@ -138,6 +166,21 @@
 
 .slide-track {
   @apply flex w-max items-stretch;
+  animation: scroll 120s linear infinite;
+}
+
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .slide {
@@ -149,7 +192,7 @@
 }
 
 .slide img:hover {
-  @apply scale-110;
+  @apply scale-110 duration-500 transition-transform;
 }
 
 .slider::before,
@@ -166,4 +209,26 @@
   @apply right-0 bg-linear-to-l from-white/60 to-transparent;
 }
 
+/* FOOTER */
+.footer-icon-hover:hover {
+  @apply bg-pink-500/80 border-white/50 text-white/90 scale-110 transition-all duration-500;
+}
 /* ANIMATIONS */
+
+/* HERO */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fade-up 1s ease-out forwards;
+}
