@@ -5,6 +5,7 @@
   font-display: optional;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Sour Gummy';
   src: url('./fonts/sour-gummy-v3-latin_latin-ext-700.woff2') format('woff2');
@@ -12,6 +13,7 @@
   font-display: optional;
   font-style: normal;
 }
+
 @layer base {
   body {
     font-family: 'Sour Gummy', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -25,6 +27,15 @@
 }
 
 @layer utilities {
+
+body.loading {
+  overflow: hidden;
+}
+
+#loader {
+  display: flex;
+}
+
   .hero-bg {
     /* FALLBACK */
     background-image: url('./images/hero_mobile_800x1200.jpg');
