@@ -24,7 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
         scale: 1.1
       }, leave: { backgroundColor: '', borderColor: '', color: '', scale: 1 }
     },
-    { selector: '.phone-contact-hover', enter: { color: '#3b82f6' }, leave: { color: '' } }
+    { selector: '.phone-contact-hover', enter: { color: '#3b82f6' }, leave: { color: '' } },
+    { selector: '.slide img', enter: { scale: 1.1 }, leave: { scale: 1 } },
+        { selector: '.slide-track', enter: { scale: 1.1 }, leave: { scale: 1 } }
   ];
   // ===== GALLERY HOVER SIMULÁCIA =====
   const galleryTrack = document.querySelector('.slide-track');
