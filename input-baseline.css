@@ -232,3 +232,37 @@
   opacity: 0;
   animation: fade-up 1s ease-out forwards;
 }
+
+/* NAV hover */
+.nav-hover.hover-temp {
+  color: #f472b6; /* rovnako ako hover:text-pink-400 */
+  transition: color 0.3s;
+}
+
+/* HERO ICON hover */
+.hero-icon-hover.hover-temp {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+/* PAW hover */
+.paw-hover.hover-temp {
+  transform: scale(1.20);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+/* FOOTER ICON hover */
+.footer-icon-hover.hover-temp {
+  background-color: rgba(236,72,153,0.8);
+  border-color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.9);
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+/* PHONE CONTACT hover */
+.phone-contact-hover.hover-temp {
+  color: #3b82f6;
+  transition: color 0.3s;
+}
