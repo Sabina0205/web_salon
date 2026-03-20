@@ -33,6 +33,8 @@
   <link rel="icon" href="./images/favicon_io_black_bgwhite/favicon.ico">
   <link rel="icon" href="./images/favicon_io_black/favicon.ico" media="(prefers-color-scheme: light)">
   <link rel="icon" href="./images/favicon_io_white/favicon.ico" media="(prefers-color-scheme: dark)">
+
+  
 </head>
 
 <body class="bg-slate-50">
@@ -243,8 +245,9 @@
       <!-- CIRCLES BG -->
       <svg class="absolute inset-0 w-full h-full overflow-visible" preserveAspectRatio="none">
         <defs>
-          <!-- FILTER-->
-          <filter id="blurMe" x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox">
+          <!-- FILTER -->
+          <filter id="blurMe" x="-50%" y="-50%" width="200%" height="200%" filterUnits="userSpaceOnUse"
+            overflow="visible">
             <feGaussianBlur in="SourceGraphic" stdDeviation="90" />
           </filter>
         </defs>

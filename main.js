@@ -1,13 +1,18 @@
+ // GLOBAL FLAG FOR REDUCED MOTION
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
  // LOADER - 5. ANIMATION
  window.addEventListener("load", () => {
-      const loader = document.getElementById("loader");
-
-      loader.classList.add("opacity-0");
-
-      setTimeout(() => {
+    const loader = document.getElementById("loader");
+    if (!prefersReducedMotion) {
+        loader.classList.add("opacity-0");
+        setTimeout(() => {
+            loader.style.display = "none";
+        }, 500);
+    } else {
         loader.style.display = "none";
-      }, 500);
-    });
+    }
+});
 
 // DROPDOWN MENU
 const toggleBtn = document.querySelector(".toggle-button");
@@ -38,32 +43,37 @@ const toggleBtn = document.querySelector(".toggle-button");
 
 // SERVICES PHOTO CHANGE
 document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll("[data-section]");
-  const pictures = document.querySelectorAll("picture[data-img]");
+    const sections = document.querySelectorAll("[data-section]");
+    const pictures = document.querySelectorAll("picture[data-img]");
 
-  function switchImage() {
-    let current = 1; // default
+    function switchImage() {
+        let current = 1;
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
+                current = section.dataset.section;
+            }
+        });
 
-    sections.forEach(section => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
-        current = section.dataset.section;
-      }
-    });
+        pictures.forEach(pic => {
+            if (prefersReducedMotion) {
+                pic.classList.remove("opacity-0");
+            } else {
+                if (pic.dataset.img === current) {
+                    pic.classList.remove("opacity-0");
+                    pic.classList.add("opacity-100");
+                } else {
+                    pic.classList.remove("opacity-100");
+                    pic.classList.add("opacity-0");
+                }
+            }
+        });
+    }
 
-    pictures.forEach(pic => {
-      if (pic.dataset.img === current) {
-        pic.classList.remove("opacity-0");
-        pic.classList.add("opacity-100");
-      } else {
-        pic.classList.remove("opacity-100");
-        pic.classList.add("opacity-0");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", switchImage);
-  switchImage(); // inicializácia
+    if (!prefersReducedMotion) {
+        window.addEventListener("scroll", switchImage);
+    }
+    switchImage();
 });
 
  // AUTOMATIC GENERATING GALLERY

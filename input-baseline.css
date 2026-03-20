@@ -275,3 +275,50 @@
 .slide-track.hover-temp {
   animation-play-state: paused;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* ÚPLNÉ VYPNUTIE HOVER EFEKTOV */
+  .nav-hover,
+  .hero-icon-hover,
+  .paw-hover,
+  .footer-icon-hover,
+  .phone-contact-hover,
+  .slide img,
+  .slide-track,
+  .panel,
+  [class*="hover"] {
+    pointer-events: none !important;
+  }
+
+  /* Špecifické classy z tvojho CSS */
+  .nav-hover.hover-temp,
+  .hero-icon-hover.hover-temp,
+  .paw-hover.hover-temp,
+  .footer-icon-hover.hover-temp,
+  .slide-track.hover-temp {
+    pointer-events: none !important;
+  }
+
+  /* Ostatné */
+  .slide-track {
+    animation: none !important;
+  }
+
+  .panel {
+    transform: scale(1) !important;
+  }
+
+  .fade-up {
+    opacity: 1 !important;
+  }
+}
+
