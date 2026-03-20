@@ -81,7 +81,31 @@ const toggleBtn = document.querySelector(".toggle-button");
           });
         });
       });
+// SERVICES GHANGE PHOTOS
+gsap.registerPlugin(ScrollTrigger);
 
+const pictures = document.querySelectorAll('picture[data-img]');
+const sections = document.querySelectorAll('[data-section]');
+
+sections.forEach((section, i) => {
+  ScrollTrigger.create({
+    trigger: section,
+    start: "top center",
+    end: "bottom center",
+    onEnter: () => showImage(i + 1),
+    onEnterBack: () => showImage(i + 1),
+  });
+});
+
+function showImage(num) {
+  pictures.forEach(pic => {
+    if (pic.dataset.img == num) {
+      gsap.to(pic, { opacity: 1, duration: 0.7, ease: "power2.out", zIndex: 50 });
+    } else {
+      gsap.to(pic, { opacity: 0, duration: 0.7, ease: "power2.out", zIndex: 10 });
+    }
+  });
+}
 //PRICES - 2. ANIMATION
  let isAnimating = false;
 

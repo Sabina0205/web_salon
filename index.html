@@ -20,7 +20,7 @@
   <script src="./main.js" defer></script>
 
   <!-- BECNHMARK JS -->
-  <script src="./benchmark.js"></script>
+  <!--<script src="./benchmark.js"></script>-->
 
   <!-- PRELOAD FONTS -->
   <link rel="preload" href="./fonts/sour-gummy-v3-latin_latin-ext-700.woff2" as="font" type="font/woff2" crossorigin>
@@ -292,7 +292,38 @@
 
           <!-- STICKY IMAGE -->
           <div class="sticky inset-0 lg:top-35 xl:top-20 2xl:top-50 2xl:left-30 min-h-[80vh]">
-            <picture>
+            <!-- STRIHANIE -->
+            <picture data-img="1" class="absolute inset-0 opacity-100 transition-opacity duration-700 z-50">
+              <!-- MOBILE VERSION -->
+              <source media="(max-width: 768px)" srcset="./images/services/service_strihanie_mobile.webp"
+                type="image/webp">
+              <!-- DESKTOP VERSION WebP -->
+              <source srcset="./images/services/service_strihanie.webp" type="image/webp">
+              <!-- FALLBACK -->
+              <img src="./images/services/service_strihanie_mobile.jpg"
+                srcset="./images/services/service_strihanie.jpg 900w" sizes="(max-width: 768px) 100vw, 50vw"
+                alt="Strihanie psa"
+                class="w-full h-full md:h-[60vh] lg:h-[70vh] xl:h-[80vh] 2xl:h-[60vh] 2xl:max-w-220 lg:rounded-2xl object-cover shadow-2xl"
+                loading="lazy" width="900" height="600">
+            </picture>
+
+            <!-- KÚPANIE -->
+            <picture data-img="2" class="absolute inset-0 opacity-0 transition-opacity duration-700 z-40">
+              <!-- MOBILE VERSION -->
+              <source media="(max-width: 768px)" srcset="./images/services/service_kupanie_mobile.webp"
+                type="image/webp">
+              <!-- DESKTOP VERSION WebP -->
+              <source srcset="./images/services/service_kupanie.webp" type="image/webp">
+              <!-- FALLBACK -->
+              <img src="./images/services/service_kupanie_mobile.jpg"
+                srcset="./images/services/service_kupanie.jpg 900w" sizes="(max-width: 768px) 100vw, 50vw"
+                alt="Kúpanie psa"
+                class="w-full h-full md:h-[60vh] lg:h-[70vh] xl:h-[80vh] 2xl:h-[60vh] 2xl:max-w-220 lg:rounded-2xl object-cover shadow-2xl"
+                loading="lazy" width="900" height="600">
+            </picture>
+
+            <!-- VYČESÁVANIE -->
+            <picture data-img="3" class="absolute inset-0 opacity-0 transition-opacity duration-700 z-30">
               <!-- MOBILE VERSION -->
               <source media="(max-width: 768px)" srcset="./images/services/service_vycesanie_mobile.webp"
                 type="image/webp">
@@ -306,12 +337,42 @@
                 loading="lazy" width="900" height="600">
             </picture>
 
+            <!-- DROBNÉ ÚPRAVY -->
+            <picture data-img="4" class="absolute inset-0 opacity-0 transition-opacity duration-700 z-20">
+              <!-- MOBILE VERSION -->
+              <source media="(max-width: 768px)" srcset="./images/services/service_drobne_upravy_mobile.webp"
+                type="image/webp">
+              <!-- DESKTOP VERSION WebP -->
+              <source srcset="./images/services/service_drobne_upravy.webp" type="image/webp">
+              <!-- FALLBACK -->
+              <img src="./images/services/service_drobne_upravy_mobile.jpg"
+                srcset="./images/services/service_drobne_upravy.jpg 900w" sizes="(max-width: 768px) 100vw, 50vw"
+                alt="Drobné úpravy psa"
+                class="w-full h-full md:h-[60vh] lg:h-[70vh] xl:h-[80vh] 2xl:h-[60vh] 2xl:max-w-220 lg:rounded-2xl object-cover shadow-2xl"
+                loading="lazy" width="900" height="600">
+            </picture>
+
+            <!-- DOPLNKOVÉ SLUŽBY -->
+            <picture data-img="5" class="absolute inset-0 opacity-0 transition-opacity duration-700 z-10">
+              <!-- MOBILE VERSION -->
+              <source media="(max-width: 768px)" srcset="./images/services/service_doplnkove_sluzby_mobile.webp"
+                type="image/webp">
+              <!-- DESKTOP VERSION WebP -->
+              <source srcset="./images/services/service_doplnkove_sluzby.webp" type="image/webp">
+              <!-- FALLBACK -->
+              <img src="./images/services/service_doplnkove_sluzby_mobile.jpg"
+                srcset="./images/services/service_doplnkove_sluzby.jpg 900w" sizes="(max-width: 768px) 100vw, 50vw"
+                alt="Doplnkové služby pre psa"
+                class="w-full h-full md:h-[60vh] lg:h-[70vh] xl:h-[80vh] 2xl:h-[60vh] 2xl:max-w-220 lg:rounded-2xl object-cover shadow-2xl"
+                loading="lazy" width="900" height="600">
+            </picture>
+
           </div>
 
           <!-- SERVICES -->
           <div class="p-4 lg:ml-4 xl:ml-10 2xl:ml-32 md:ml-10">
             <!-- 1. STRIHANIE -->
-            <div class="flex min-h-[80vh] justify-center items-center">
+            <div data-section="1" class="flex min-h-[80vh] justify-center items-center">
               <div class="w-full text-center">
                 <h2
                   class="text-3xl md:text-4xl lg:text-5xl p-4 font-black uppercase bg-linear-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent mb-4">
@@ -323,7 +384,7 @@
             </div>
 
             <!-- 2. KUPANIE -->
-            <div class="flex min-h-[80vh] justify-center items-center">
+            <div data-section="2" class="flex min-h-[80vh] justify-center items-center">
               <div class="w-full text-center">
                 <h2
                   class="text-3xl md:text-4xl lg:text-5xl font-black p-4 uppercase bg-linear-to-r from-yellow-400 via-red-500 to-orange-400 bg-clip-text text-transparent mb-4">
@@ -335,7 +396,7 @@
             </div>
 
             <!-- 3. VYČESÁVANIE -->
-            <div class="flex min-h-[80vh] justify-center items-center">
+            <div data-section="3" class="flex min-h-[80vh] justify-center items-center">
               <div class="w-full text-center">
                 <h2
                   class="text-3xl md:text-4xl lg:text-5xl font-black p-4 uppercase bg-linear-to-r from-green-400 via-white to-yellow-300 bg-clip-text text-transparent mb-4">
@@ -348,7 +409,7 @@
             </div>
 
             <!-- 4. DROBNÉ ÚPRAVY -->
-            <div class="flex min-h-[80vh] justify-center items-center">
+            <div data-section="4" class="flex min-h-[80vh] justify-center items-center">
               <div class="w-full text-center">
                 <h2
                   class="text-3xl md:text-4xl lg:text-5xl font-black p-4 uppercase bg-linear-to-r from-blue-400 via-pink-300 to-teal-300 bg-clip-text text-transparent mb-4">
@@ -361,7 +422,7 @@
             </div>
 
             <!-- 5. DOPLNKOVÉ -->
-            <div class="flex min-h-[80vh] justify-center items-center">
+            <div data-section="5" class="flex min-h-[80vh] justify-center items-center">
               <div class="w-full text-center">
                 <h2
                   class="text-3xl md:text-4xl lg:text-5xl font-black p-4 uppercase bg-linear-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent mb-4">
@@ -371,11 +432,16 @@
                 </p>
               </div>
             </div>
+
           </div>
+
         </div>
       </div>
+
     </div>
+
     </div>
+
   </section>
 
   <!-- PRICE SECTION -->
