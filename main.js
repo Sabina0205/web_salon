@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const pocetEl = document.querySelector('.rok-pocet');
     if (pocetEl) {
-        pocetEl.textContent = years; // Iba zobrazí 10
+        pocetEl.textContent = years; // 10
     }
 });
 
@@ -161,7 +161,6 @@ const track = document.querySelector('.slide-track');
 const slides = document.querySelectorAll('.slide img');
 
 if (!prefersReducedMotion) {
-    // normálna animácia
     let speed = 0.5;
     let position = 0;
 
@@ -188,10 +187,9 @@ if (!prefersReducedMotion) {
 
     animate();
 } else {
-    // Reduced motion: zobraziť všetky obrázky vedľa seba staticky
     track.style.transform = 'none';
-    track.style.display = 'flex';       // obrázky vedľa seba
-    track.style.flexWrap = 'wrap';      // môžu ísť do viacerých riadkov
+    track.style.display = 'flex';     
+    track.style.flexWrap = 'wrap';
     slides.forEach(img => {
         img.style.transform = 'none';
         img.style.transition = 'none';
