@@ -18,8 +18,8 @@
   <link rel="preload" href="./main.js" as="script">
   <script src="./main.js" defer></script>
 
-    <!-- BECNHMARK JS -->
- <!-- <script src="./benchmark.js"></script>-->
+  <!-- BECNHMARK JS -->
+  <!-- <script src="./benchmark.js"></script>-->
 
   <!-- PRELOAD FONTS -->
   <link rel="preload" href="./fonts/sour-gummy-v3-latin_latin-ext-700.woff2" as="font" type="font/woff2" crossorigin>
@@ -247,8 +247,9 @@
       <!-- CIRCLES BG -->
       <svg class="absolute inset-0 w-full h-full overflow-visible" preserveAspectRatio="none">
         <defs>
-          <!-- FILTER-->
-          <filter id="blurMe" x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox">
+          <!-- FILTER -->
+          <filter id="blurMe" x="-50%" y="-50%" width="200%" height="200%" filterUnits="userSpaceOnUse"
+            overflow="visible">
             <feGaussianBlur in="SourceGraphic" stdDeviation="90" />
           </filter>
         </defs>
@@ -307,7 +308,7 @@
                 loading="lazy" width="900" height="600">
             </picture>
 
-             <!-- KÚPANIE -->
+            <!-- KÚPANIE -->
             <picture data-img="2" class="absolute inset-0 opacity-0 transition-opacity duration-700 z-40">
               <!-- MOBILE VERSION -->
               <source media="(max-width: 768px)" srcset="./images/services/service_kupanie_mobile.webp"
@@ -322,7 +323,7 @@
                 loading="lazy" width="900" height="600">
             </picture>
 
-              <!-- VYČESÁVANIE -->
+            <!-- VYČESÁVANIE -->
             <picture data-img="3" class="absolute inset-0 opacity-0 transition-opacity duration-700 z-30">
               <!-- MOBILE VERSION -->
               <source media="(max-width: 768px)" srcset="./images/services/service_vycesanie_mobile.webp"
