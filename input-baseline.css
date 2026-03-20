@@ -15,6 +15,17 @@
 }
 
 @layer base {
+  @media (prefers-reduced-motion: reduce) {
+  #loader {
+    opacity: 0 !important;
+    display: none !important;
+    visibility: hidden !important;
+  }
+  #main-content {
+    visibility: visible !important;
+  }
+}
+
   body {
     font-family: 'Sour Gummy', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }

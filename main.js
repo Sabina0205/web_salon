@@ -1,23 +1,38 @@
+// DETECTION REDUCED MOTION 
+const mm = gsap.matchMedia();
+
+// GLOBAL FLAG FOR REDUCED MOTION
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
 // LOADER - 5. ANIMATION
-gsap.to("#spinner", {
-  rotation: 360,
-  duration: 1,
-  repeat: -1,
-  ease: "none"
-});
+if (!reduceMotion) {
+  gsap.to("#spinner", {
+    rotation: 360,
+    duration: 1,
+    repeat: -1,
+    ease: "none"
+  });
+}
 
 window.addEventListener("load", () => {
-  gsap.to("#loader", {
-    opacity: 0,
-    scale: 1,
-    duration: 0.5,
-    ease: "power2.out",
-    onComplete: () => {
-      gsap.set("#loader", { display: "none" }); 
-      gsap.set("#main-content", { visibility: "visible" });
-      document.body.style.overflow = "auto"; 
-    }
-  });
+  if (reduceMotion) {
+    gsap.set("#spinner", { clearProps: "all" });
+    gsap.set("#loader", { opacity: 0, scale: 1, display: "none" });
+    gsap.set("#main-content", { visibility: "visible" });
+    document.body.style.overflow = "auto";
+  } else {
+    gsap.to("#loader", {
+      opacity: 0,
+      scale: 1,
+      duration: 0.5,
+      ease: "power2.out",
+      onComplete: () => {
+        gsap.set("#loader", { display: "none" }); 
+        gsap.set("#main-content", { visibility: "visible" });
+        document.body.style.overflow = "auto"; 
+      }
+    });
+  }
 });
 
 // MOBILE MENU VANILLAJS - NOT COMPARED
@@ -48,82 +63,90 @@ const toggleBtn = document.querySelector(".toggle-button");
       });
 
 // HERO TEXT - 1. ANIMATION
- const heroElements = document.querySelectorAll(".hero-text");
-        // h1
-        gsap.from(heroElements[0], { opacity: 0, y: 16, duration: 1, delay: 0 });
-        // h2
-        gsap.from(heroElements[1], { opacity: 0, y: 16, duration: 1, delay: 0.6 });
-        // p
-        gsap.from(heroElements[2], { opacity: 0, y: 16, duration: 1, delay: 0.8 });
-        // tlačidlá
-        gsap.from(heroElements[3], { opacity: 0, y: 16, duration: 1, delay: 1.0 });
+mm.add("(prefers-reduced-motion: no-preference)", () => {
+  const heroElements = document.querySelectorAll(".hero-text");
+  gsap.from(heroElements[0], { opacity: 0, y: 16, duration: 1, delay: 0 });
+  gsap.from(heroElements[1], { opacity: 0, y: 16, duration: 1, delay: 0.6 });
+  gsap.from(heroElements[2], { opacity: 0, y: 16, duration: 1, delay: 0.8 });
+  gsap.from(heroElements[3], { opacity: 0, y: 16, duration: 1, delay: 1.0 });
+});
 
 // ABOUT ANIMATION
- document.addEventListener("DOMContentLoaded", () => {
-        gsap.registerPlugin(ScrollTrigger);
+mm.add("(prefers-reduced-motion: no-preference)", () => {
+  gsap.registerPlugin(ScrollTrigger);
 
-        const revealEls = document.querySelectorAll(".about-scroll");
+  const revealEls = document.querySelectorAll(".about-scroll");
+  gsap.set(revealEls, { opacity: 0, y: 20 });
 
-        gsap.set(revealEls, { opacity: 0, y: 20 });
+  revealEls.forEach(el => {
+    gsap.to(el, {
+      scrollTrigger: {
+        trigger: el,
+        start: "top 90%", 
+        end: "bottom 10%", 
+        toggleActions: "play reverse play reverse", 
+      },
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+      ease: "power1.out",
+    });
+  });
+});
 
-        revealEls.forEach(el => {
-          gsap.to(el, {
-            scrollTrigger: {
-              trigger: el,
-              start: "top 90%",  
-              end: "bottom 10%",   
-              toggleActions: "play reverse play reverse", 
-            },
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            ease: "power1.out",
-          });
-        });
-      });
 // SERVICES GHANGE PHOTOS
-gsap.registerPlugin(ScrollTrigger);
+mm.add("(prefers-reduced-motion: no-preference)", () => {
+  gsap.registerPlugin(ScrollTrigger);
 
-const pictures = document.querySelectorAll('picture[data-img]');
-const sections = document.querySelectorAll('[data-section]');
+  const pictures = document.querySelectorAll('picture[data-img]');
+  const sections = document.querySelectorAll('[data-section]');
 
-sections.forEach((section, i) => {
-  ScrollTrigger.create({
-    trigger: section,
-    start: "top center",
-    end: "bottom center",
-    onEnter: () => showImage(i + 1),
-    onEnterBack: () => showImage(i + 1),
+  sections.forEach((section, i) => {
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top center",
+      end: "bottom center",
+      onEnter: () => showImage(i + 1),
+      onEnterBack: () => showImage(i + 1),
+    });
   });
 });
 
 function showImage(num) {
+  const pictures = document.querySelectorAll('picture[data-img]');
   pictures.forEach(pic => {
     if (pic.dataset.img == num) {
-      gsap.to(pic, { opacity: 1, duration: 0.7, ease: "power2.out", zIndex: 50 });
+      gsap.set(pic, { opacity: 1, zIndex: 50 }); // IHNEĎ viditeľné
     } else {
-      gsap.to(pic, { opacity: 0, duration: 0.7, ease: "power2.out", zIndex: 10 });
+      gsap.set(pic, { opacity: 0, zIndex: 10 }); // IHNEĎ skryté
     }
   });
 }
+
 //PRICES - 2. ANIMATION
  let isAnimating = false;
 
-    document.querySelectorAll('#s, #m, #l, #xl, #xxl').forEach(checkbox => {
-      checkbox.addEventListener('change', function () {
-        if (this.checked && !isAnimating) {
-          isAnimating = true;
-          gsap.set('.panel', { scale: 0.75 });  // Vždy reset!
-
-          gsap.to('.panel', {
-            scale: 1,
-            duration: 1,
-            ease: "power2.out",  // Jednoduchý easing (alebo [0.25,0.46,0.45,0.94])
-            onComplete: () => { isAnimating = false; }
-          });
-        }
-      });
-    });
+document.querySelectorAll('#s, #m, #l, #xl, #xxl').forEach(checkbox => {
+  checkbox.addEventListener('change', function () {
+    if (this.checked && !isAnimating) {
+      isAnimating = true;
+      
+      if (reduceMotion) {
+        // IHNEĎ scale 1 bez animácie
+        gsap.set('.panel', { scale: 1 });
+        isAnimating = false;
+      } else {
+        gsap.set('.panel', { scale: 0.75 });
+        gsap.to('.panel', {
+          scale: 1,
+          duration: 1,
+          ease: "power2.out",
+          onComplete: () => { isAnimating = false; }
+        });
+      }
+    }
+  });
+});
 
 //AUTOMATIC GALLERY IMAGES
 (() => {
@@ -142,30 +165,32 @@ function showImage(num) {
       })();
 
 // INFINITE GALLERY - 3. ANIMATION
-const track = document.querySelector('.slide-track');
-const slides = document.querySelectorAll('.slide img');
+mm.add("(prefers-reduced-motion: no-preference)", () => {
+  const track = document.querySelector('.slide-track');
+  const slides = document.querySelectorAll('.slide img');
 
-const scrollTween = gsap.to(track, {
-  x: "-50%", 
-  duration: 120,
-  ease: "linear",
-  repeat: -1
-});
-
-track.addEventListener('mouseenter', () => scrollTween.pause());
-track.addEventListener('mouseleave', () => scrollTween.resume());
-
-slides.forEach(img => {
-  img.addEventListener('mouseenter', () => {
-    gsap.to(img, { scale: 1.1, duration: 0.5, ease: "power2.out" });
+  const scrollTween = gsap.to(track, {
+    x: "-50%", 
+    duration: 120,
+    ease: "linear",
+    repeat: -1
   });
-  img.addEventListener('mouseleave', () => {
-    gsap.to(img, { scale: 1, duration: 0.5, ease: "power2.out" });
+
+  track.addEventListener('mouseenter', () => scrollTween.pause());
+  track.addEventListener('mouseleave', () => scrollTween.resume());
+
+  slides.forEach(img => {
+    img.addEventListener('mouseenter', () => {
+      gsap.to(img, { scale: 1.1, duration: 0.5, ease: "power2.out" });
+    });
+    img.addEventListener('mouseleave', () => {
+      gsap.to(img, { scale: 1, duration: 0.5, ease: "power2.out" });
+    });
   });
 });
 
 // HOVER
-document.addEventListener('DOMContentLoaded', () => {
+mm.add("(prefers-reduced-motion: no-preference)", () => {
   function setupHover(selector, enterProps, leaveProps) {
     document.querySelectorAll(selector).forEach(el => {
       gsap.set(el, { clearProps: "all" });
@@ -188,45 +213,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // CLOSE-HOVER
-  setupHover('.close-hover', 
-    { color: '#ef4444' }, 
-    { color: '' }
-  );
-  // HERO-ICON-HOVER
-  setupHover('.hero-icon-hover', 
-    { scale: 1.1 }, 
-    { scale: 1 }
-  );
-  // NAV-HOVER
-  setupHover('.nav-hover', 
-    { color: '#f472b6' }, 
-    { color: '' }
-  );
-  // PAW-HOVER
-  setupHover('.paw-hover', 
-    { scale: 1.25, cursor: 'pointer' }, 
-    { scale: 1 }
-  );
-  // FOOTER-ICON-HOVER
-  setupHover('.footer-icon-hover', 
-    { 
-      backgroundColor: 'rgba(236,72,153,0.8)',
-      borderColor: 'rgba(255,255,255,0.5)',
-      color: 'rgba(255,255,255,0.9)',
-      scale: 1.1 
-    }, 
-    { 
-      backgroundColor: '', 
-      borderColor: '', 
-      color: '', 
-      scale: 1 
-    }
-  );
-  // PHONE-CONTACT-HOVER
-  setupHover('.phone-contact-hover', 
-    { color: '#3b82f6' }, 
-    { color: '' }
-  );
+  setupHover('.close-hover', { color: '#ef4444' }, { color: '' });
+  setupHover('.hero-icon-hover', { scale: 1.1 }, { scale: 1 });
+  setupHover('.nav-hover', { color: '#f472b6' }, { color: '' });
+  setupHover('.paw-hover', { scale: 1.25, cursor: 'pointer' }, { scale: 1 });
+  setupHover('.footer-icon-hover', { 
+    backgroundColor: 'rgba(236,72,153,0.8)',
+    borderColor: 'rgba(255,255,255,0.5)',
+    color: 'rgba(255,255,255,0.9)',
+    scale: 1.1 
+  }, { backgroundColor: '', borderColor: '', color: '', scale: 1 });
+  setupHover('.phone-contact-hover', { color: '#3b82f6' }, { color: '' });
 });
-
