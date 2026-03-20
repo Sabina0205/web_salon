@@ -36,6 +36,36 @@ const toggleBtn = document.querySelector(".toggle-button");
         }
       });
 
+// SERVICES PHOTO CHANGE
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("[data-section]");
+  const pictures = document.querySelectorAll("picture[data-img]");
+
+  function switchImage() {
+    let current = 1; // default
+
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
+        current = section.dataset.section;
+      }
+    });
+
+    pictures.forEach(pic => {
+      if (pic.dataset.img === current) {
+        pic.classList.remove("opacity-0");
+        pic.classList.add("opacity-100");
+      } else {
+        pic.classList.remove("opacity-100");
+        pic.classList.add("opacity-0");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", switchImage);
+  switchImage(); // inicializácia
+});
+
  // AUTOMATIC GENERATING GALLERY
       (() => {
         const firstSlide = document.querySelector('.slide');
