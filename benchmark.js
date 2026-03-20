@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // ===== AUTO SCROLL =====
-  let scrollSpeed = 0.6;
+  let scrollSpeed = 3;
   function autoScroll() {
     window.scrollBy(0, scrollSpeed);
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
@@ -97,3 +97,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }, 3000);
 });
+
+
+      // ===== SERVICES PHOTO CHANGE =====
+const pictures = document.querySelectorAll("picture[data-img]");
+let currentIndex = 0;
+
+function switchImageAuto() {
+    if (pictures.length === 0) return;
+
+    pictures.forEach((pic, i) => {
+        if (i === currentIndex) {
+            pic.classList.remove("opacity-0");
+            pic.classList.add("opacity-100");
+        } else {
+            pic.classList.remove("opacity-100");
+            pic.classList.add("opacity-0");
+        }
+    });
+
+    currentIndex = (currentIndex + 1) % pictures.length;
+}
+
+// spúšťaj každé 2 sekundy
+setInterval(switchImageAuto, 2000);
+switchImageAuto();
